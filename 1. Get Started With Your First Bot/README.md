@@ -38,7 +38,7 @@ Open Visual Studio 2015 and Create a **New Project** by selecting **Visual C#=>B
 
 The template is a fully functional Echo Bot that takes the user's text utterance as input and returns it as output.
  
- ### Task 2 
+### Task 2 
 Let's take a look for a moment on what the template has created for us: Check the **Solution Explorer** to see the resources that were created    
 
 ![bot2.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot2.png)
