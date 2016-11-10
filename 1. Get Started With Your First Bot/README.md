@@ -53,7 +53,7 @@ This method contains all the core functionality of the Bot Template App. In this
 
 In order to **run it** and check out what it does, we will use the **Bot Framework Emulator** to test our Bot application. The Bot Framework provides a a channel emulator that lets you test calls to your Bot as if it were being called by the Bot Framework cloud service.
 
-## [](exercise2)Exercise 2: Debug your Application
+## Exercise 2: Debug your Application
 
 ### Task 1
 First, **start your Bot in Visual Studio** using a browser as the application host   
@@ -81,7 +81,7 @@ Now **open the Bot Framework Emulator**. When working with the emulator with a b
 ![bot7.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot7.png) 
 ![bot8.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot8.png)
 
-## [](exercise3)Exercise 3: Chat with your Bot
+## Exercise 3: Chat with your Bot
 
 ### Task 1
 Let's try to **chat with our Bot** to see what happens. **Type anything** in the Emulator Window and **press Enter** to see the response: 
@@ -102,6 +102,6 @@ Let's go back to **Visual Studio** and **Stop the Debugging**:
 ![bot12.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot12.png) 
 
 
-## [](exercise4)Exercise 4: Publish your Application to Azure
+## Exercise 4: Publish your Application to Azure
 
 
