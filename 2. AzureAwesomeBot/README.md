@@ -18,7 +18,13 @@ This module includes the following exercises:
 
 We are now going to change the template code that counts the characters of the message, to something more complicated.
 
-Let's go back to the **Project in Visual Studio**, **Open** the **MessagesController Class** and replace the **Post Method** with this:
+
+Let's go back to the **Project in Visual Studio** and start making changes!
+
+
+### Task 1
+- **Open** the **MessagesController Class** and replace the **Post Method** with this:
+
 
 ```csharp
 public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
@@ -36,4 +42,23 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
             return response;
         }
 ```
+
+- Create a new Folder by r**ight-clicking** on the **Project=>Add=>New Folder**. **Name** the folder **Dialogs**
+
+
+![bot22.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot22.png)
+
+
+- In the **Dialogs Folder** create a **new Class** and name it **AzureAwesomeBotDialog.cs**
+
+![bot23.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot23.png)
+
+![](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot24.png)
+
+- Repeat the **same steps** and create a **New Folder** named **Helpers** and a **New Class** inside it named **AttachmentHelpers.cs**
+
+![bot26.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot26.png)
+
+![bot27.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot27.png)
+
 
