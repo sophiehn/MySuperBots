@@ -25,9 +25,13 @@ The following is required to complete this module:
 
 This module includes the following exercises:
 1. Create your first Bot Application in Visual Studio
+
 1. Debug your Application
+
 1. Chat with your Bot
+
 1. Publish your Application to Azure
+
 
 
 
