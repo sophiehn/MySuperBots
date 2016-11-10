@@ -25,11 +25,11 @@ The following is required to complete this module:
 This module includes the following exercises:
 
 1. [Create your first Bot Application in Visual Studio](https://github.com/sophiehn/MyBots/tree/master/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-1-create-your-first-bot-application-in-visual-studio)
-1. Debug your Application
-1. Chat with your Bot
-1. Publish your Application to Azure
+1. [Debug your Application](https://github.com/sophiehn/MyBots/blob/master/1.%20Get%20Started%20With%20Your%20First%20Bot/README.md#exercise-2-debug-your-application)
+1. [Chat with your Bot](https://github.com/sophiehn/MyBots/blob/master/1.%20Get%20Started%20With%20Your%20First%20Bot/README.md#exercise-3-chat-with-your-bot)
+1. [Publish your Application to Azure](https://github.com/sophiehn/MyBots/blob/master/1.%20Get%20Started%20With%20Your%20First%20Bot/README.md#exercise-4-publish-your-application-to-azure)
 
-## [](exercise1)Exercise 1: Create your first Bot Application in Visual Studio
+## Exercise 1: Create your first Bot Application in Visual Studio
 
 ### Task 1 
 Open Visual Studio 2015 and Create a **New Project** by selecting **Visual C#=>Bot Application** from the Templates. **Name** your Project **AzureAwesomeBot**: 
