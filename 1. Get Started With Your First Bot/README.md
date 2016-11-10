@@ -30,12 +30,12 @@ This module includes the following exercises:
 1. Chat with your Bot
 1. Publish your Application to Azure
 
-
-
-
-
 ## [](exercise1)Exercise 1: Create your first Bot Application in Visual Studio
 
+1. Open Visual Studio 2015 and Create a **New Project** by selecting **Visual C#=>Bot Application** from the Templates. **Name** your Project **AzureAwesomeBot**:
+
+
+![bot1.png]({{site.baseurl}}/ Get Started With Your First Bot/bot1.png)
 
 
 
