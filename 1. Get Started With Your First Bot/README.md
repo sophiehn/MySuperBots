@@ -104,9 +104,34 @@ Let's go back to **Visual Studio** and **Stop the Debugging**:
 
 ## Exercise 4: Publish your Bot to Azure
 
+We are now going to publish our application to the cloud and stop running it locally.
+
+### Task 1
+- Go to [Azure Management Portal](www.portal.azure.com) and **Sign In** with your Azure Account. 
+- **Create** a new **App Service** by selecting **+NEW=>Web+Mobile=>Web App** and filling the form with the nesseccary fields:
+
+
 ![bot15.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot15.png) 
+
+- For the **App Name** use a **unique** name for your web app
+- **Create a new Resource Group** for your app (or use an existing one, it is totaly up to you)
+
+
 ![bot16.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot16.png) 
+
+- **Create a new Service Plan**, choose the **Location most close to you** (in this case North Europe) and the **Basic Pricing Tier** and click **OK**
+
+
 ![bot17.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot17.png) 
+
+- Now all the parameters are set up and we are ready to create our Web App. Click the **Pin to Dashboard checkbox** and then **OK**
+
+- If everything goes OK, in a few seconds you will be able to **see your Web App** in the main **Dashboard**:
+
+
+![bot19.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot19.png)
+
+Let's go back to Visual Studio and publish our Bot to the Web App we just created.
 ![bot18.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot18.png) 
 
 
