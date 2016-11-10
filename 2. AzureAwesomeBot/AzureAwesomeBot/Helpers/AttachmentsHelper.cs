@@ -19,7 +19,7 @@ namespace AzureAwesomeBot.Helpers
                 card.Text = actionText;
             if (actionSubtitle != null)
                 card.Subtitle = actionSubtitle;
-
+       
             card.Images = new List<CardImage>
                          {
                                 new CardImage
@@ -28,7 +28,6 @@ namespace AzureAwesomeBot.Helpers
                                 }
                          };
             card.Buttons = new List<CardAction>(actions);
-
             return card.ToAttachment();
         }
 
