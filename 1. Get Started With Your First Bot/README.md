@@ -30,6 +30,8 @@ This module includes the following exercises:
 1. Publish your Application to Azure
 
 
+
+
 ## [Exercise 1:Create your first Bot Application in Visual Studio](exercise1)
 
 
