@@ -18,5 +18,5 @@ The following is required to complete this module:
 
 - [Visual Studio Community 2015](https://www.visualstudio.com/products/visual-studio-community-vs) or greater - Important: Please update all VS extensions to their latest versions Tools->Extensions and Updates->Updates
 - [Microsoft Bot Framework Channel Emulator](https://download.botframework.com/bf-v3/tools/emulator/publish.htm)
-- [Bot Application template](http://aka.ms/bf-bc-vstemplate) - **Download and Save the zip file **to your Visual Studio 2015 templates directory which is traditionally in **"%USERPROFILE%\Documents\Visual Studio 2015\Templates\ProjectTemplates\Visual C#\"**
+- [Bot Application template](http://aka.ms/bf-bc-vstemplate) - 
 - An active Azure subscription
