@@ -27,7 +27,7 @@ This module includes the following exercises:
 1. [Create your first Bot Application in Visual Studio](https://github.com/sophiehn/MyBots/tree/master/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-1-create-your-first-bot-application-in-visual-studio)
 1. [Debug your Application](https://github.com/sophiehn/MyBots/blob/master/1.%20Get%20Started%20With%20Your%20First%20Bot/README.md#exercise-2-debug-your-application)
 1. [Chat with your Bot](https://github.com/sophiehn/MyBots/blob/master/1.%20Get%20Started%20With%20Your%20First%20Bot/README.md#exercise-3-chat-with-your-bot)
-1. [Publish your Application to Azure](https://github.com/sophiehn/MyBots/blob/master/1.%20Get%20Started%20With%20Your%20First%20Bot/README.md#exercise-4-publish-your-application-to-azure)
+1. [Publish your Bot to Azure](https://github.com/sophiehn/MyBots/blob/master/1.%20Get%20Started%20With%20Your%20First%20Bot/README.md#exercise-4-publish-your-bot-to-azure)
 
 ## Exercise 1: Create your first Bot Application in Visual Studio
 
@@ -102,6 +102,11 @@ Let's go back to **Visual Studio** and **Stop the Debugging**:
 ![bot12.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot12.png) 
 
 
-## Exercise 4: Publish your Application to Azure
+## Exercise 4: Publish your Bot to Azure
+
+![bot15.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot15.png) 
+![bot16.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot16.png) 
+![bot17.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot17.png) 
+![bot18.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot18.png) 
 
 
