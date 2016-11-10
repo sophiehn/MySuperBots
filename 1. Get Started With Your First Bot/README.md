@@ -34,19 +34,21 @@ This module includes the following exercises:
 
 1. Open Visual Studio 2015 and Create a **New Project** by selecting **Visual C#=>Bot Application** from the Templates. **Name** your Project **AzureAwesomeBot**: ![bot1.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot1.png) The template is a fully functional Echo Bot that takes the user's text utterance as input and returns it as output.
  
-2. Let's take a look for a moment on what the template has created for us: Check the **Solution Explorer** to see the resources that were created    ![bot2.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot2.png)
+2. Let's take a look for a moment on what the template has created for us: Check the **Solution Explorer** to see the resources that were created    
+![bot2.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot2.png)
 
 3. **Open** the **Controllers Folder** and double-click on the **MessagesController.cs** file. There you can see the MessagesController Class with an aync **Post Method**. This method contains all the core functionality of the Bot Template App. In this case the code takes the message text for the user, then creates a reply message using the CreateReplyMessage function. The BotAuthentication decoration on the method is used to validate your Bot Connector credentials over HTTPS.   ![bot3.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot3.png)  In order to **run it** and check out what it does, we will use the **Bot Framework Emulator** to test our Bot application. The Bot Framework provides a a channel emulator that lets you test calls to your Bot as if it were being called by the Bot Framework cloud service. 
 
-4. First, start your Bot in Visual Studio using a browser as the application host.   ![bot4.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot4.png) When the application is built and deployed the web browser will open and display the application Default.htm file (which is part of the Bot Application project). Feel free to modify the Default.html file to match the name and description of your Bot Application.
+4. First, **start your Bot in Visual Studio** using a browser as the application host.   ![bot4.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot4.png) When the application is built and deployed the **web browser will open and display the application Default.htm file** (which is part of the Bot Application project). Feel free to modify the Default.html file to match the name and description of your Bot Application.
 
-5. Here's the Bot Application Default.htm file in our Default Browser: ![bot5.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot5.png) When using the emulator to test your Bot application, **make note of the port that the application is running on**, which in this example is port 3978. You will need this information to run the Bot Framework Emulator.  ![bot6.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot6.png)
+5. Here's the **Bot Application Default.htm file in our Default Browser**: ![bot5.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot5.png) 
+When using the emulator to test your Bot application, **make note of the port that the application is running on**, which in this example is port 3978. You will need this information to run the Bot Framework Emulator.  ![bot6.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot6.png)
 
 6. Now **open the Bot Framework Emulator**. When working with the emulator with a bot running locally, you need:
 
-- The Url for your bot set the localhost:xxxx pulled from the last step. > Note: will need to add the path "/api/messages" to your URL when using the Bot Application template.
-- Leave the Microsoft App Id field empty for now
-- Leave the Microsoft App Password empty as well
+- The **Url for your Bot** to set the **localhost:xxxx** pulled from the last step. > **Note: will need to add the path "/api/messages" to your URL** when using the Bot Application template.
+- Leave the **Microsoft App Id** field **empty** for now
+- Leave the **Microsoft App Password** field **empty** as well
 - This will only work with the emulator running locally; in the cloud you would instead have to specify the appropriate URL and authentication values.
 
 
