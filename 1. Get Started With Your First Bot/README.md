@@ -14,7 +14,7 @@ In this module, you'll:
 
 ##  Prerequisites
 
-*The following is required to complete this module:
+The following is required to complete this module:
 
 - [Visual Studio Community 2015](https://www.visualstudio.com/products/visual-studio-community-vs) or greater - **Important:** Please update all VS extensions to their latest versions Tools->Extensions and Updates->Updates
 - [Microsoft Bot Framework Channel Emulator](https://download.botframework.com/bf-v3/tools/emulator/publish.htm)
@@ -32,13 +32,12 @@ This module includes the following exercises:
 
 ## [](exercise1)Exercise 1: Create your first Bot Application in Visual Studio
 
-Open Visual Studio 2015 and Create a **New Project** by selecting **Visual C#=>Bot Application** from the Templates. **Name** your Project **AzureAwesomeBot**:
+1. Open Visual Studio 2015 and Create a **New Project** by selecting **Visual C#=>Bot Application** from the Templates. **Name** your Project **AzureAwesomeBot**:
 
 ![bot1.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot1.png)
-
 The template is a fully functional Echo Bot that takes the user's text utterance as input and returns it as output.
-
-Let's take a look for a moment on what the template has created for us:
+ 
+2. Let's take a look for a moment on what the template has created for us:
 
 Check the **Solution Explorer** to see the resources that were created
 ![bot2.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot2.png)
@@ -72,4 +71,3 @@ This will only work with the emulator running locally; in the cloud you would in
 
 ![bot7.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot7.png)
 ![bot8.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot8.png)
-
