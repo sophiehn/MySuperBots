@@ -84,8 +84,10 @@ Now **open the Bot Framework Emulator**. When working with the emulator with a b
 
 ## Exercise 3: Chat with your Bot
 
+Let's try to **chat with our Bot** to see what happens. 
+
 ### Task 1
-Let's try to **chat with our Bot** to see what happens. **Type anything** in the Emulator Window and **press Enter** to see the response: 
+**Type anything** in the Emulator Window and **press Enter** to see the response: 
 
 ![bot9.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot9.png) 
 
