@@ -24,6 +24,7 @@ The following is required to complete this module:
 ## Exercises
 
 This module includes the following exercises:
+
 1. Create your first Bot Application in Visual Studio
 
 1. Debug your Application
