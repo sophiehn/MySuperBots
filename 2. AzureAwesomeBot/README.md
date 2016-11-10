@@ -18,4 +18,22 @@ This module includes the following exercises:
 
 We are now going to change the template code that counts the characters of the message, to something more complicated.
 
+Let's go back to the **Project in Visual Studio**, **Open** the **MessagesController Class** and replace the **Post Method** with this:
+
+```csharp
+public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
+        {
+            if (activity.Type == ActivityTypes.Message)
+            {
+                ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
+                await Conversation.SendAsync(activity, () => new AzureAwesomeBotDialog());
+            }
+            else
+            {
+                HandleSystemMessage(activity);
+            }
+            var response = Request.CreateResponse(HttpStatusCode.OK);
+            return response;
+        }
+```
 
