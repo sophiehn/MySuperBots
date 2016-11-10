@@ -131,7 +131,36 @@ We are now going to publish our application to the cloud and stop running it loc
 
 ![bot19.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot19.png)
 
-Let's go back to Visual Studio and publish our Bot to the Web App we just created.
+Let's go back to **Visual Studio** and **publish** our Bot to the Web App we just created.
+- **Right Click on the Project=>Publish** 
+![bot13.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot13.png) 
+
+- As **Publish Target** select the **Microsoft Azure App Service** and click **Next** 
+
+![bot14.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot14.png) 
+
+- Select your **Subcription** and after a few seconds you will be able to see the Resource Group you created for this app
+- Select the **Resrouce Group** and click **OK** 
 ![bot18.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot18.png) 
+
+- In the **Connection Tab** leave everything as it is and click **Publish** 
+
+![bot20.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot20.png) 
+
+- After a while **a browser will open** with your Application like the Debug step in the previous exercise. Now the difference is that **the application is no longer running on localhost**, it is hosted on a Web App on Azure. **You can see it by looking at the URL of the page**: 
+
+![bot21.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot21.png)
+
+And that was it. We now have a Bot published on Azure and ready to be connected with a channel. 
+
+## Next Steps
+
+1. [Add Functionality to your Bot](https://github.com/sophiehn/MyBots/tree/master/2.%20AzureAwesomeBot)
+1. [Register your Bot with the Microsoft Bot Framework]()
+1. [Configure your Bot Channels]()
+
+
+
+
 
 
