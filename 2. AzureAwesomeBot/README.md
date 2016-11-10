@@ -173,11 +173,7 @@ namespace AzureAwesomeBot.Helpers
 }
 ```
 
-- Go back to the **MessageController** Class and **add the following two lines of code** right above the
-```csharp
-namespace AzureAwesomeBot 
-```
-:
+- Go back to the **MessageController** Class and **add the following two lines of code**:
 
 
 ```csharp
@@ -185,3 +181,7 @@ namespace AzureAwesomeBot
 using Microsoft.Bot.Builder.Dialogs;
 using AzureAwesomeBot.Dialogs;
 ```
+.
+.
+.
+namespace AzureAwesomeBot 
