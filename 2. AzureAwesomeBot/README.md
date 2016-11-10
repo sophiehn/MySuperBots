@@ -12,9 +12,9 @@ The following is required to complete this module:
 ## Exercises
 This module includes the following exercises:
 
-1. Add functionality to the Bot
-1. Test and understand the new functionalities
-1. Publish the new Bot to Azure
+1. [Add functionality to the Bot](https://github.com/sophiehn/MyBots/tree/master/2.%20AzureAwesomeBot#exercise-1-add-attachments-to-the-bot)
+1. [Test and understand the new functionalities](https://github.com/sophiehn/MyBots/tree/master/2.%20AzureAwesomeBot#exercise-2-test-and-understand-the-new-functionalities)
+1. [Publish the new Bot to Azure](https://github.com/sophiehn/MyBots/tree/master/2.%20AzureAwesomeBot#exercise-3-publish-the-new-bot-to-azure)
 
 
 ## Exercise 1: Add Attachments to the Bot
@@ -190,13 +190,13 @@ using AzureAwesomeBot.Dialogs;
 *namespace AzureAwesomeBot{.....}*
 
 ## Exercise 2: Test and understand the new functionalities
-Now let's see what we did:
+Now let's test the changes:
 
 - **Debug** the Bot locally from Visual Studio
 
 ![](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot30.png)
 
-- **Start the Emulator**and **send a message** to the Bot. It should respond with two messages and an attachment as below:
+- **Start the Emulator** and **send a message** to the Bot. It should respond with two messages and an attachment as below:
 
 
 ![](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot28.png)
