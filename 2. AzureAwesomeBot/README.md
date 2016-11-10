@@ -10,11 +10,12 @@ The following is required to complete this module:
 
 ## Exercises
 This module includes the following exercises:
-1. Change the main functionality of the Bot
-1. Add Attachments to the Bot
+1. Add functionality to the Bot
+1. Test and understand the new functionalities
 1. Publish the new Bot to Azure
 
-## Exercise 1: Change the main functionality of the Bot
+
+## Exercise 1: Add Attachments to the Bot
 
 We are now going to change the template code that counts the characters of the message, to something more complicated.
 
@@ -43,6 +44,7 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
         }
 ```
 
+### Task 2
 - Create a new Folder by r**ight-clicking** on the **Project=>Add=>New Folder**. **Name** the folder **Dialogs**
 
 
@@ -117,6 +119,7 @@ namespace AzureAwesomeBot.Dialogs
 }
 ```
 
+### Task 3
 - Repeat the **above steps** to create a **New Folder** named **Helpers** and a **New Class** inside it named **AttachmentHelpers.cs**
 
 ![bot26.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot26.png)
@@ -173,6 +176,7 @@ namespace AzureAwesomeBot.Helpers
 }
 ```
 
+### Task 4
 - Go back to the **MessageController** Class and **add the following two lines of code** on the top of the file:
 
 
@@ -181,8 +185,28 @@ namespace AzureAwesomeBot.Helpers
 using Microsoft.Bot.Builder.Dialogs;
 using AzureAwesomeBot.Dialogs;
 ```
-*
-namespace AzureAwesomeBot
-{
-.....
-}*
+*namespace AzureAwesomeBot{.....}*
+
+## Exercise 2: Test and understand the new functionalities
+Now let's see what we did:
+
+- **Debug** the Bot locally from Visual Studio
+
+![](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot30.png)
+
+- **Start the Emulator**and **send a message** to the Bot. It should respond with two messages and an attachment as below:
+
+
+![](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot28.png)
+
+- **Click** on one of the two **buttons** and see what happens!
+
+
+![](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot29.png)
+
+
+## Exercise 3: Publish the new Bot to Azure
+
+
+
+
