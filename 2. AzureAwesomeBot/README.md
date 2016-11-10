@@ -55,10 +55,128 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 
 ![](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot24.png)
 
-- Repeat the **same steps** and create a **New Folder** named **Helpers** and a **New Class** inside it named **AttachmentHelpers.cs**
+
+- Open the **AzureAwesomeBotDialog.cs file** you just created and replace all the code with this:
+
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Threading.Tasks;
+using Microsoft.Bot.Connector;
+using Microsoft.Bot.Builder.Dialogs;
+using AzureAwesomeBot.Helpers;
+
+namespace AzureAwesomeBot.Dialogs
+{
+    [Serializable()]
+    public class AzureAwesomeBotDialog : IDialog<object>
+    {
+        public async Task StartAsync(IDialogContext context)
+        {
+            await context.PostAsync("Hello from Azure Awesome Bot!");
+            context.Wait(InputGiven);
+        }
+
+        public async Task InputGiven(IDialogContext context, IAwaitable<IMessageActivity> argument)
+        {
+            await context.PostAsync("What can I do for you today?");
+            var message = context.MakeMessage();
+            message.AttachmentLayout = AttachmentLayoutTypes.Carousel;
+            var att = new List<Attachment>();
+            var actions = new List<CardAction>()
+            {
+               AttachmentsHelper.CreateCardAction("First Action", "First Action"),AttachmentsHelper.CreateCardAction("Second Action","Second Action")
+            };
+            var card = AttachmentsHelper.CreateHeroCardAttachment("Title", "Text", "Subtitle", "http://i292.photobucket.com/albums/mm38/iCe-quEen99/athens.jpg", actions);
+            att.Add(card);
+            message.Attachments = att;
+            await context.PostAsync(message);
+            context.Wait(ActionSelected);
+        }
+
+        private async Task ActionSelected(IDialogContext context, IAwaitable<IMessageActivity> argument)
+        {
+            var message = await argument;
+
+            if (message.Text == "First Action")
+            {
+                await context.PostAsync($"You selected: {message.Text}");
+            }
+            else if (message.Text == "Second Action")
+            {
+                await context.PostAsync($"You selected: {message.Text}");
+            }
+            else
+                context.Wait(ActionSelected);
+        }
+
+    }
+}
+```
+
+- Repeat the **above steps** to create a **New Folder** named **Helpers** and a **New Class** inside it named **AttachmentHelpers.cs**
 
 ![bot26.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot26.png)
 
-![bot27.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot27.png)
+
+- **Replace** the code of the **AttachmentHelpers Class** with the following:
 
 
+```csharp
+using Microsoft.Bot.Connector;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace AzureAwesomeBot.Helpers
+{
+    public class AttachmentsHelper
+    {
+        public static Attachment CreateHeroCardAttachment(string actionTitle, string actionText,
+         string actionSubtitle, string picURL, IEnumerable<CardAction> actions)
+        {
+            var card = new HeroCard
+            {
+                Title = actionTitle,
+            };
+            if (actionText != null)
+                card.Text = actionText;
+            if (actionSubtitle != null)
+                card.Subtitle = actionSubtitle;
+
+            card.Images = new List<CardImage>
+                         {
+                                new CardImage
+                                {
+                                    Url = picURL
+                                }
+                         };
+            card.Buttons = new List<CardAction>(actions);
+
+            return card.ToAttachment();
+        }
+
+        public static CardAction CreateCardAction(string title, string value)
+        {
+            return new CardAction()
+            {
+                Title = title,
+                Value = value,
+                Type = ActionTypes.PostBack
+            };
+        }
+    }
+}
+```
+
+- Go back to the **MessageController** Class and **add the following two lines of code** right **before the namespace AzureAwesomeBot** line:
+
+
+```csharp
+using Microsoft.Bot.Builder.Dialogs;
+using AzureAwesomeBot.Dialogs;
+```
