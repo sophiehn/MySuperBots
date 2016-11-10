@@ -1,7 +1,14 @@
 ## Overview
+In this module you will understand how the Bot Framework and the Emulator work. You will display simple messages to the user and a more complex message with Image and Buttons. Plus, you will learn how to add actions to these buttons and how to handle the different actions with your Bot Code.
+
 
 ## Objectives
 In this module, you'll:
+
+- Create a **Dialog Class**
+- Create a **Helper Class** for the **Attachments**
+- Create One **Hero Card Attachment** 
+- **Display** the Attachment with two **Card Actions**
 
 
 ## Prerequisites
@@ -221,9 +228,14 @@ Back to the Emulator, **click** on one of the two **buttons** and see what happe
 To fully understang what **each property** does, go back to the code and **change them a few times,** run the application each time and **see what is different on the attachment card**.
 
 
+
 ## Exercise 3: Publish the new Bot to Azure
 
 When you are ready, **Publish your updated application to Azure** by following the [instructions](https://github.com/sophiehn/MyBots/blob/master/1.%20Get%20Started%20With%20Your%20First%20Bot/README.md#task-2-3) from Module 1
 
 
+## Next Steps
+
+1. [Register your Bot with the Microsoft Bot Framework](https://github.com/sophiehn/MyBots/tree/master/3.-Register-your-Bot-with-the-Microsoft-Bot-Framework)
+1. [Configure your Bot Channels](https://github.com/sophiehn/MyBots/tree/master/4.-Configure-your-Bot-Channels)
 
