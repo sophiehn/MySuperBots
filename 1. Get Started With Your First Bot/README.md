@@ -53,14 +53,16 @@ This method contains all the core functionality of the Bot Template App. In this
 
 In order to **run it** and check out what it does, we will use the **Bot Framework Emulator** to test our Bot application. The Bot Framework provides a a channel emulator that lets you test calls to your Bot as if it were being called by the Bot Framework cloud service.
 
-### Task 4
+## [](exercise2)Exercise 2: Debug your Application
+
+### Task 1
 First, **start your Bot in Visual Studio** using a browser as the application host   
 
 ![bot4.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot4.png) 
 
 When the application is built and deployed the **web browser will open and display the application Default.htm file** (which is part of the Bot Application project). Feel free to modify the Default.html file to match the name and description of your Bot Application.
 
-### Task 5
+### Task 2
 Here's the **Bot Application Default.htm file in our Default Browser**: 
 
 ![bot5.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot5.png)  
@@ -69,7 +71,7 @@ When using the emulator to test your Bot application, **make note of the port th
 
 ![bot6.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot6.png)
 
-### Task 6
+### Task 3
 Now **open the Bot Framework Emulator**. When working with the emulator with a bot running locally, you need:
 - The **Url for your Bot** to set the **localhost:xxxx** pulled from the last step. > **Note: will need to add the path "/api/messages" to your URL** when using the Bot Application template.
 - Leave the **Microsoft App Id** field **empty** for now
@@ -79,7 +81,9 @@ Now **open the Bot Framework Emulator**. When working with the emulator with a b
 ![bot7.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot7.png) 
 ![bot8.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot8.png)
 
-### Task 7
+## [](exercise3)Exercise 3: Chat with your Bot
+
+### Task 1
 Let's try to **chat with our Bot** to see what happens. **Type anything** in the Emulator Window and **press Enter** to see the response: 
 
 ![bot9.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot9.png) 
@@ -89,5 +93,15 @@ Let's try to **chat with our Bot** to see what happens. **Type anything** in the
 Pay attention to the **JSON message** that appears in the Emulator as well as the **status of our request (202 Accepted)**. That means that our message was suggesfully delivered to the Bot and it replied with a JSON message with the text property set to **"You sent hi which was 2 characters"**. 
 
 This response was configured to be sent via the MessageController class in Visual Studio when the user sends a text message to the Bot.
+
+### Task 2
+Let's go back to **Visual Studio** and **Stop the Debugging**:
+
+![bot11.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot11.png) 
+
+![bot12.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot12.png) 
+
+
+## [](exercise4)Exercise 4: Publish your Application to Azure
 
 
