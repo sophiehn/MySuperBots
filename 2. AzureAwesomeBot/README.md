@@ -181,7 +181,7 @@ namespace AzureAwesomeBot.Helpers
 using Microsoft.Bot.Builder.Dialogs;
 using AzureAwesomeBot.Dialogs;
 ```
+*.
 .
 .
-.
-namespace AzureAwesomeBot 
+namespace AzureAwesomeBot*
