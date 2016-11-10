@@ -25,7 +25,7 @@ The following is required to complete this module:
 
 This module includes the following exercises:
 
-1. Create your first Bot Application in Visual Studio
+1. [Create your first Bot Application in Visual Studio](https://github.com/sophiehn/MyBots/tree/master/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-1-create-your-first-bot-application-in-visual-studio)
 1. Debug your Application
 1. Chat with your Bot
 1. Publish your Application to Azure
