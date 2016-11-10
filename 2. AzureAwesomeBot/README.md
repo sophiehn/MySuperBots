@@ -13,15 +13,15 @@ In this module, you'll:
 
 ## Prerequisites
 The following is required to complete this module:
-- Complete [Module 1- Get Started With Your First Bot](https://github.com/sophiehn/BotsForDummies/tree/master/1.%20Get%20Started%20With%20Your%20First%20Bot)
+- Complete [Module 1- Get Started With Your First Bot](https://github.com/sophiehn/MySuperBots/tree/master/1.%20Get%20Started%20With%20Your%20First%20Bot)
 
 
 ## Exercises
 This module includes the following exercises:
 
-1. [Add functionality to the Bot](https://github.com/sophiehn/BotsForDummies/tree/master/2.%20AzureAwesomeBot#exercise-1-add-attachments-to-the-bot)
-1. [Test and understand the new functionalities](https://github.com/sophiehn/BotsForDummies/tree/master/2.%20AzureAwesomeBot#exercise-2-test-and-understand-the-new-functionalities)
-1. [Publish the new Bot to Azure](https://github.com/sophiehn/BotsForDummies/tree/master/2.%20AzureAwesomeBot#exercise-3-publish-the-new-bot-to-azure)
+1. [Add functionality to the Bot](https://github.com/sophiehn/MySuperBots/tree/master/2.%20AzureAwesomeBot#exercise-1-add-attachments-to-the-bot)
+1. [Test and understand the new functionalities](https://github.com/sophiehn/MySuperBots/tree/master/2.%20AzureAwesomeBot#exercise-2-test-and-understand-the-new-functionalities)
+1. [Publish the new Bot to Azure](https://github.com/sophiehn/MySuperBots/tree/master/2.%20AzureAwesomeBot#exercise-3-publish-the-new-bot-to-azure)
 
 
 ## Exercise 1: Add Attachments to the Bot
@@ -231,11 +231,11 @@ To fully understang what **each property** does, go back to the code and **chang
 
 ## Exercise 3: Publish the new Bot to Azure
 
-When you are ready, **Publish your updated application to Azure** by following the [instructions](https://github.com/sophiehn/MyBots/blob/master/1.%20Get%20Started%20With%20Your%20First%20Bot/README.md#task-2-3) from Module 1
+When you are ready, **Publish your updated application to Azure** by following the [instructions](https://github.com/sophiehn/MySuperBots/blob/master/1.%20Get%20Started%20With%20Your%20First%20Bot/README.md#task-2-3) from Module 1
 
 
 ## Next Steps
 
-1. [Register your Bot with the Microsoft Bot Framework](https://github.com/sophiehn/BotsForDummies/tree/master/3.%20Register%20your%20Bot%20with%20the%20Microsoft%20Bot%20Framework)
-1. [Configure your Bot Channels](https://github.com/sophiehn/BotsForDummies/tree/master/4.%20Configure%20your%20Bot%20Channels)
+1. [Register your Bot with the Microsoft Bot Framework](https://github.com/sophiehn/MySuperBots/tree/master/3.%20Register%20your%20Bot%20with%20the%20Microsoft%20Bot%20Framework)
+1. [Configure your Bot Channels](https://github.com/sophiehn/MySuperBots/tree/master/4.%20Configure%20your%20Bot%20Channels)
 
