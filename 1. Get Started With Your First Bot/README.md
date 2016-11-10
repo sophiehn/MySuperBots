@@ -43,7 +43,12 @@ This module includes the following exercises:
 5. Here's the Bot Application Default.htm file in our Default Browser: ![bot5.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot5.png) When using the emulator to test your Bot application, **make note of the port that the application is running on**, which in this example is port 3978. You will need this information to run the Bot Framework Emulator.  ![bot6.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot6.png)
 
 6. Now **open the Bot Framework Emulator**. When working with the emulator with a bot running locally, you need:
+
 - The Url for your bot set the localhost:xxxx pulled from the last step. > Note: will need to add the path "/api/messages" to your URL when using the Bot Application template.
 - Leave the Microsoft App Id field empty for now
 - Leave the Microsoft App Password empty as well
-- This will only work with the emulator running locally; in the cloud you would instead have to specify the appropriate URL and authentication values.  ![bot7.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot7.png) ![bot8.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot8.png)
+- This will only work with the emulator running locally; in the cloud you would instead have to specify the appropriate URL and authentication values.
+
+
+
+![bot7.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot7.png) ![bot8.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot8.png)
