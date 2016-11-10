@@ -160,7 +160,7 @@ And that was it. We now have a Bot published on Azure and ready to be connected 
 
 ## Next Steps
 
-1. [Add Functionality to your Bot](https://github.com/sophiehn/MyBots/blob/master/2.%20AzureAwesomeBot/README.md)
+1. [Add Functionality to your Bot](https://github.com/sophiehn/MyBots/blob/master/2.%20AzureAwesomeBot)
 1. [Register your Bot with the Microsoft Bot Framework]()
 1. [Configure your Bot Channels]()
 
