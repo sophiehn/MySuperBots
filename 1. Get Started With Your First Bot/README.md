@@ -34,7 +34,8 @@ This module includes the following exercises:
 
 1. Open Visual Studio 2015 and Create a **New Project** by selecting **Visual C#=>Bot Application** from the Templates. **Name** your Project **AzureAwesomeBot**:
 
-![]({{site.baseurl}}/http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot1.png)
+![bot2.png]({{site.baseurl}}/1. Get Started With Your First Bot/bot2.png)
+
 
 
 
