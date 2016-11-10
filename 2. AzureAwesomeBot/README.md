@@ -1,7 +1,14 @@
 ## Overview
+In this module you will understand how the Bot Framework and the Emulator work. You will display simple messages to the user and a more complex message with Image and Buttons. Plus, you will learn how to add actions to these buttons and how to handle the different actions with your Bot Code.
+
 
 ## Objectives
 In this module, you'll:
+
+- Create a **Dialog Class**
+- Create a **Helper Class** for the **Attachments**
+- Create One **Hero Card Attachment** 
+- **Display** the Attachment with two **Card Actions**
 
 
 ## Prerequisites
