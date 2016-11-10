@@ -24,10 +24,10 @@ The following is required to complete this module:
 ## Exercises
 This module includes the following exercises:
 
-1. [Create your first Bot Application in Visual Studio](https://github.com/sophiehn/BotsForDummies/tree/master/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-1-create-your-first-bot-application-in-visual-studio)
-1. [Debug your Application](https://github.com/sophiehn/BotsForDummies/blob/master/1.%20Get%20Started%20With%20Your%20First%20Bot/README.md#exercise-2-debug-your-application)
-1. [Chat with your Bot](https://github.com/sophiehn/BotsForDummies/blob/master/1.%20Get%20Started%20With%20Your%20First%20Bot/README.md#exercise-3-chat-with-your-bot)
-1. [Publish your Bot to Azure](https://github.com/sophiehn/BotsForDummies/blob/master/1.%20Get%20Started%20With%20Your%20First%20Bot/README.md#exercise-4-publish-your-bot-to-azure)
+1. [Create your first Bot Application in Visual Studio](https://github.com/sophiehn/MySuperBots/tree/master/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-1-create-your-first-bot-application-in-visual-studio)
+1. [Debug your Application](https://github.com/sophiehn/MySuperBots/blob/master/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-2-debug-your-application)
+1. [Chat with your Bot](https://github.com/sophiehn/MySuperBots/blob/master/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-3-chat-with-your-bot)
+1. [Publish your Bot to Azure](https://github.com/sophiehn/MySuperBots/blob/master/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-4-publish-your-bot-to-azure)
 
 ## Exercise 1: Create your first Bot Application in Visual Studio
 
@@ -160,9 +160,9 @@ And that was it. We now have a Bot published on Azure and ready to be connected 
 
 ## Next Steps
 
-1. [Add Functionality to your Bot](https://github.com/sophiehn/BotsForDummies/blob/master/2.%20AzureAwesomeBot)
-1. [Register your Bot with the Microsoft Bot Framework](https://github.com/sophiehn/BotsForDummies/tree/master/3.%20Register%20your%20Bot%20with%20the%20Microsoft%20Bot%20Framework)
-1. [Configure your Bot Channels](https://github.com/sophiehn/BotsForDummies/tree/master/4.%20Configure%20your%20Bot%20Channels)
+1. [Add Functionality to your Bot](https://github.com/sophiehn/MySuperBots/blob/master/2.%20AzureAwesomeBot)
+1. [Register your Bot with the Microsoft Bot Framework](https://github.com/sophiehn/MySuperBots/tree/master/3.%20Register%20your%20Bot%20with%20the%20Microsoft%20Bot%20Framework)
+1. [Configure your Bot Channels](https://github.com/sophiehn/MySuperBots/tree/master/4.%20Configure%20your%20Bot%20Channels)
 
 
 
