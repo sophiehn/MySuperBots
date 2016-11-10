@@ -187,7 +187,9 @@ namespace AzureAwesomeBot.Helpers
 using Microsoft.Bot.Builder.Dialogs;
 using AzureAwesomeBot.Dialogs;
 ```
-*namespace AzureAwesomeBot{.....}*
+> *namespace AzureAwesomeBot{.....}*
+
+
 
 ## Exercise 2: Test and understand the new functionalities
 Now let's test the changes:
