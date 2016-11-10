@@ -29,7 +29,8 @@ This module includes the following exercises:
 1. Chat with your Bot
 1. Publish your Application to Azure
 
-### [Exercise1:Create your first Bot Application in Visual Studio](#anchors-in-markdown)
+
+[Exercise1:Create your first Bot Application in Visual Studio](#anchors-in-markdown)
 
 
 
