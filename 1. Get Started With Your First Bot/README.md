@@ -51,9 +51,10 @@ Let's take a look for a moment on what the template has created for us: Check th
 
 This method contains all the core functionality of the Bot Template App. In this case the code takes the message text for the user, then creates a reply message using the CreateReplyMessage function. The BotAuthentication decoration on the method is used to validate your Bot Connector credentials over HTTPS. 
 
-In order to **run it** and check out what it does, we will use the **Bot Framework Emulator** to test our Bot application. The Bot Framework provides a a channel emulator that lets you test calls to your Bot as if it were being called by the Bot Framework cloud service.
 
 ## Exercise 2: Debug your Application
+
+In order to **run it** and check out what it does, we will use the **Bot Framework Emulator** to test our Bot application. The Bot Framework provides a a channel emulator that lets you test calls to your Bot as if it were being called by the Bot Framework cloud service.
 
 ### Task 1
 First, **start your Bot in Visual Studio** using a browser as the application host   
