@@ -134,7 +134,9 @@ We are now going to publish our application to the cloud and stop running it loc
 
 ![bot19.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot19.png)
 
-Let's go back to **Visual Studio** and **publish** our Bot to the Web App we just created.
+## Task 2
+
+Let's go back to **Visual Studio** and **publish** our Bot to the Web App we just created:
 - **Right Click on the Project=>Publish** 
 ![bot13.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot13.png) 
 
