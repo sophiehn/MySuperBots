@@ -205,14 +205,25 @@ Now let's test the changes:
 
 ![](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot28.png)
 
-- **Click** on one of the two **buttons** and see what happens!
+Before you rush into pushing the buttons, take a moment to go back to your code and have a carefull look at your **AttachmentsHelper.cs** class. You will be able to locate the **properties** marked on the picture above:
+
+- Text
+- Title
+- Subtitle
+- Button Actions, etc.
+
+
+Back to the Emulator, **click** on one of the two **buttons** and see what happens!
 
 
 ![](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot29.png)
 
+To fully understang what **each property** does, go back to the code and **change them a few times,** run the application each time and **see what is different on the attachment card**.
+
 
 ## Exercise 3: Publish the new Bot to Azure
 
+When you are ready, **Publish your updated application to Azure** by following the [instructions](https://github.com/sophiehn/MyBots/blob/master/1.%20Get%20Started%20With%20Your%20First%20Bot/README.md#task-2-3) from Module 1
 
 
 
