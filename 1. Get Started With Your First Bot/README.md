@@ -44,10 +44,11 @@ In order to **run it** and check out what it does, we will use the **Bot Framewo
 5. Here's the **Bot Application Default.htm file in our Default Browser**: ![bot5.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot5.png)  When using the emulator to test your Bot application, **make note of the port that the application is running on**, which in this example is port 3978. You will need this information to run the Bot Framework Emulator.  ![bot6.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot6.png)
 
 6. Now **open the Bot Framework Emulator**. When working with the emulator with a bot running locally, you need:
-
 - The **Url for your Bot** to set the **localhost:xxxx** pulled from the last step. > **Note: will need to add the path "/api/messages" to your URL** when using the Bot Application template.
 - Leave the **Microsoft App Id** field **empty** for now
 - Leave the **Microsoft App Password** field **empty** as well
 - This will only work with the emulator running locally; in the cloud you would instead have to specify the appropriate URL and authentication values ![bot7.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot7.png) ![bot8.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot8.png)
 
-7. Let's try to **chat with our Bot** to see what happens. **Type anything** in the Emulator Window and **press Enter** to see the response: ![bot9.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot9.png) ![bot10.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot10.png) Pay attention to the **JSON message** that appears in the Emulator as well as the **status of our request (202 Accepted)**. That means that our message was suggesfully delivered to the Bot and it replied with a JSON message with the text property set to **"You sent hi which was 2 characters"**. This response was configured to be sent via the MessageController class in Visual Studio when the user sends a text message to the Bot.
+1. Let's try to **chat with our Bot** to see what happens. **Type anything** in the Emulator Window and **press Enter** to see the response: ![bot9.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot9.png) ![bot10.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot10.png) Pay attention to the **JSON message** that appears in the Emulator as well as the **status of our request (202 Accepted)**. That means that our message was suggesfully delivered to the Bot and it replied with a JSON message with the text property set to **"You sent hi which was 2 characters"**. This response was configured to be sent via the MessageController class in Visual Studio when the user sends a text message to the Bot.
+
+
