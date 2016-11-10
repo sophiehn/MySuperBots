@@ -40,10 +40,13 @@ This module includes the following exercises:
 3. **Open** the **Controllers Folder** and double-click on the **MessagesController.cs** file. There you can see the MessagesController Class with an aync **Post Method**.    ![bot3.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot3.png)  This method contains all the core functionality of the Bot Template App. In this case the code takes the message text for the user, then creates a reply message using the CreateReplyMessage function. The BotAuthentication decoration on the method is used to validate your Bot Connector credentials over HTTPS. 
 In order to **run it** and check out what it does, we will use the **Bot Framework Emulator** to test our Bot application. The Bot Framework provides a a channel emulator that lets you test calls to your Bot as if it were being called by the Bot Framework cloud service.
 
-4. First, **start your Bot in Visual Studio** using a browser as the application host.   ![bot4.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot4.png) When the application is built and deployed the **web browser will open and display the application Default.htm file** (which is part of the Bot Application project). Feel free to modify the Default.html file to match the name and description of your Bot Application.
+4. First, **start your Bot in Visual Studio** using a browser as the application host   ![bot4.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot4.png) When the application is built and deployed the **web browser will open and display the application Default.htm file** (which is part of the Bot Application project). Feel free to modify the Default.html file to match the name and description of your Bot Application.
 
 5. Here's the **Bot Application Default.htm file in our Default Browser**: ![bot5.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot5.png) 
-When using the emulator to test your Bot application, **make note of the port that the application is running on**, which in this example is port 3978. You will need this information to run the Bot Framework Emulator.  ![bot6.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot6.png)
+
+When using the emulator to test your Bot application, **make note of the port that the application is running on**, which in this example is port 3978. You will need this information to run the Bot Framework Emulator. 
+
+![bot6.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot6.png)
 
 6. Now **open the Bot Framework Emulator**. When working with the emulator with a bot running locally, you need:
 
