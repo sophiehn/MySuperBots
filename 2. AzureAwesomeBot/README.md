@@ -236,6 +236,6 @@ When you are ready, **Publish your updated application to Azure** by following t
 
 ## Next Steps
 
-1. [Register your Bot with the Microsoft Bot Framework](https://github.com/sophiehn/MySuperBots/tree/master/3.%20Register%20your%20Bot%20with%20the%20Microsoft%20Bot%20Framework)
-1. [Configure your Bot Channels](https://github.com/sophiehn/MySuperBots/tree/master/4.%20Configure%20your%20Bot%20Channels)
+- [Register your Bot with the Microsoft Bot Framework](https://github.com/sophiehn/MySuperBots/tree/master/3.%20Register%20your%20Bot%20with%20the%20Microsoft%20Bot%20Framework)
+- [Configure your Bot Channels](https://github.com/sophiehn/MySuperBots/tree/master/4.%20Configure%20your%20Bot%20Channels)
 
