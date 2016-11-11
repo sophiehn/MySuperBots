@@ -160,12 +160,7 @@ And that was it. We now have a Bot published on Azure and ready to be connected 
 
 ## Next Steps
 
-1. [Add Functionality to your Bot](https://github.com/sophiehn/MySuperBots/blob/master/2.%20AzureAwesomeBot)
-1. [Register your Bot with the Microsoft Bot Framework](https://github.com/sophiehn/MySuperBots/tree/master/3.%20Register%20your%20Bot%20with%20the%20Microsoft%20Bot%20Framework)
-1. [Configure your Bot Channels](https://github.com/sophiehn/MySuperBots/tree/master/4.%20Configure%20your%20Bot%20Channels)
-
-
-
-
-
+- [Add Functionality to your Bot](https://github.com/sophiehn/MySuperBots/blob/master/2.%20AzureAwesomeBot)
+- [Register your Bot with the Microsoft Bot Framework](https://github.com/sophiehn/MySuperBots/tree/master/3.%20Register%20your%20Bot%20with%20the%20Microsoft%20Bot%20Framework)
+- [Configure your Bot Channels](https://github.com/sophiehn/MySuperBots/tree/master/4.%20Configure%20your%20Bot%20Channels)
 
