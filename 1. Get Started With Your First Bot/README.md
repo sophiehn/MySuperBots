@@ -110,7 +110,7 @@ Let's go back to **Visual Studio** and **Stop the Debugging**:
 We are now going to publish our application to the cloud and stop running it locally.
 
 ### Task 1
-- Go to [Azure Management Portal](www.portal.azure.com) and **Sign In** with your Azure Account. 
+- Go to [Azure Management Portal](http://www.portal.azure.com) and **Sign In** with your Azure Account. 
 - **Create** a new **App Service** by selecting **+NEW=>Web+Mobile=>Web App** and filling the form with the nesseccary fields:
 
 
