@@ -73,7 +73,7 @@ When using the emulator to test your Bot application, **make note of the port th
 ![bot6.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot6.png)
 
 ### Task 3
-Now **open the Bot Framework Emulator**. When working with the emulator with a bot running locally, you need:
+sNow **open the Bot Framework Emulator**. When working with the emulator with a bot running locally, you need:
 - The **Url for your Bot** to set the **localhost:xxxx** pulled from the last step. > **Note: will need to add the path "/api/messages" to your URL** when using the Bot Application template.
 - Leave the **Microsoft App Id** field **empty** for now
 - Leave the **Microsoft App Password** field **empty** as well
@@ -110,7 +110,7 @@ Let's go back to **Visual Studio** and **Stop the Debugging**:
 We are now going to publish our application to the cloud and stop running it locally.
 
 ### Task 1
-- Go to [Azure Management Portal](http://www.portal.azure.com) and **Sign In** with your Azure Account. 
+- Go to [Azure Management Portal](https://www.portal.azure.com) and **Sign In** with your Azure Account. 
 - **Create** a new **App Service** by selecting **+NEW=>Web+Mobile=>Web App** and filling the form with the nesseccary fields:
 
 
