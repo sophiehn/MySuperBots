@@ -43,7 +43,6 @@ Let's take a look for a moment on what the template has created for us: Check th
 
 ![bot2.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot2.png)
 
-
 ### Task 3 
 **Open** the **Controllers Folder** and double-click on the **MessagesController.cs** file. There you can see the MessagesController Class with an aync **Post Method**.    
 
@@ -53,7 +52,6 @@ This method contains all the core functionality of the Bot Template App. In this
 
 
 ## Exercise 2: Debug your Application
-
 In order to **run it** and check out what it does, we will use the **Bot Framework Emulator** to test our Bot application. The Bot Framework provides a a channel emulator that lets you test calls to your Bot as if it were being called by the Bot Framework cloud service.
 
 ### Task 1
@@ -65,13 +63,10 @@ When the application is built and deployed the **web browser will open and displ
 
 ### Task 2
 Here's the **Bot Application Default.htm file in our Default Browser**: 
-
 ![bot5.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot5.png)  
-
 When using the emulator to test your Bot application, **make note of the port that the application is running on**, which in this example is port 3978. You will need this information to run the Bot Framework Emulator.  
 
 ![bot6.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot6.png)
-
 ### Task 3
 sNow **open the Bot Framework Emulator**. When working with the emulator with a bot running locally, you need:
 - The **Url for your Bot** to set the **localhost:xxxx** pulled from the last step. > **Note: will need to add the path "/api/messages" to your URL** when using the Bot Application template.
@@ -83,7 +78,6 @@ sNow **open the Bot Framework Emulator**. When working with the emulator with a 
 ![bot8.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot8.png)
 
 ## Exercise 3: Chat with your Bot
-
 Let's try to **chat with our Bot** to see what happens. 
 
 ### Task 1
@@ -110,7 +104,7 @@ Let's go back to **Visual Studio** and **Stop the Debugging**:
 We are now going to publish our application to the cloud and stop running it locally.
 
 ### Task 1
-- Go to [Azure Management Portal](https://www.portal.azure.com) and **Sign In** with your Azure Account. 
+- Go to [Azure Management Portal](https://portal.azure.com) and **Sign In** with your Azure Account. 
 - **Create** a new **App Service** by selecting **+NEW=>Web+Mobile=>Web App** and filling the form with the nesseccary fields:
 
 
