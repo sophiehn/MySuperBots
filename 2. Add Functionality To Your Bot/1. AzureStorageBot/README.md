@@ -13,7 +13,6 @@ In this module, you'll:
 ## Prerequisites
 The following is required to complete these modules:
 - [Module 1- Create Your First Bot](https://github.com/sophiehn/MySuperBots/tree/master/1.%20Create%20your%20First%20Bot)
-- [Module 2- 2. Add Functionality To Your Bot/1. AzureStorageBot/](https://github.com/sophiehn/MySuperBots/tree/master/2.%20Add%20Functionality%20To%20Your%20Bot/1.%20AzureStorageBot)
 
 ## Exercises
 This module includes the following exercises:
