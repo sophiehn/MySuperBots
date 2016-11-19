@@ -10,7 +10,7 @@ In this module, you'll:
 - Create a **Bot Application**
 - **Debug** your Bot Application locally 
 - Use the Microsoft Bot Framework Channel Emulator to **chat with your Bot**
-- **Publish your Bot** to an Azure **App Service**
+- **Publish your Bot** to an Azure **Web App**
 
 ##  Prerequisites
 
