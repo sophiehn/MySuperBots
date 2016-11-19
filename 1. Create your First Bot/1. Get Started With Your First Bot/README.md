@@ -93,7 +93,6 @@ This response was configured to be sent via the MessageController class in Visua
 
 u### Task 2
 Let's go back to **Visual Studio** and **Stop the Debugging**:
-
 ![bot11.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot11.png) 
 
 ![bot12.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot12.png) 
@@ -103,8 +102,7 @@ Let's go back to **Visual Studio** and **Stop the Debugging**:
 
 BWe are now going to publish our application to the cloud and stop running it locally.
 
-### Task 1
-- Go to [Azure Management Portal](https://portal.azure.com) and **Sign In** with your Azure Account. 
+### Task 1- Go to [Azure Management Portal](https://portal.azure.com) and **Sign In** with your Azure Account. 
 - **Create** a new **App Service** by selecting **+NEW=>Web+Mobile=>Web App** and filling the form with the nesseccary fields:
 
 
@@ -154,7 +152,6 @@ And that was it. We now have a Bot published on Azure and ready to be connected 
 
 ## Next Steps
 
-- [Add Functionality to your Bot](https://github.com/sophiehn/MySuperBots/blob/master/2.%20AzureAwesomeBot)
-- [Register your Bot with the Microsoft Bot Framework](https://github.com/sophiehn/MySuperBots/tree/master/3.%20Register%20your%20Bot%20with%20the%20Microsoft%20Bot%20Framework)
-- [Configure your Bot Channels](https://github.com/sophiehn/MySuperBots/tree/master/4.%20Configure%20your%20Bot%20Channels)
+- [Edit Your Bot Code](https://github.com/sophiehn/MySuperBots/tree/master/1.%20Create%20your%20First%20Bot/2.%20AzureAwesomeBot)
+- [Publish Your Bot](https://github.com/sophiehn/MySuperBots/tree/master/3.%20Publish%20Your%20Bot)
 
