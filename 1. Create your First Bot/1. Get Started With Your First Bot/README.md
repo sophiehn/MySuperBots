@@ -24,10 +24,10 @@ The following is required to complete this module:
 ## Exercises
 This module includes the following exercises:
 
-1. [Create your first Bot Application in Visual Studio](https://github.com/sophiehn/MySuperBots/tree/master/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-1-create-your-first-bot-application-in-visual-studio)
-1. [Debug your Application](https://github.com/sophiehn/MySuperBots/blob/master/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-2-debug-your-application)
-1. [Chat with your Bot](https://github.com/sophiehn/MySuperBots/blob/master/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-3-chat-with-your-bot)
-1. [Publish your Bot to Azure](https://github.com/sophiehn/MySuperBots/blob/master/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-4-publish-your-bot-to-azure)
+1. [Create your first Bot Application in Visual Studio](https://github.com/sophiehn/MySuperBots/edit/master/1.%20Create%20your%20First%20Bot/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-1-create-your-first-bot-application-in-visual-studio)
+1. [Debug your Application](https://github.com/sophiehn/MySuperBots/edit/master/1.%20Create%20your%20First%20Bot/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-2-debug-your-application)
+1. [Chat with your Bot](https://github.com/sophiehn/MySuperBots/edit/master/1.%20Create%20your%20First%20Bot/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-3-chat-with-your-bot)
+1. [Publish your Bot to Azure](https://github.com/sophiehn/MySuperBots/edit/master/1.%20Create%20your%20First%20Bot/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-4-publish-your-bot-to-azure)
 
 ## Exercise 1: Create your first Bot Application in Visual Studio
 
