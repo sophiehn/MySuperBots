@@ -15,31 +15,30 @@ namespace AzureAwesomeBot.Dialogs
     [Serializable()]
     public class AzureAwesomeBotDialog : IDialog<object>
     {
+
+        CloudStorageAccount storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));
+        string image = null;
+        string name = null;
+
         public async Task StartAsync(IDialogContext context)
         {
             await context.PostAsync("Hello from Azure Awesome Bot!");
             context.Wait(InputGiven);
-
         }
 
         public async Task InputGiven(IDialogContext context, IAwaitable<IMessageActivity> argument)
         {
-            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));
             CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
             CloudBlobContainer container = blobClient.GetContainerReference("botsource");
 
-            string image = null;
-            string name = null; 
+           
             await context.PostAsync("What can I do for you today?");
             var message = context.MakeMessage();
             message.AttachmentLayout = AttachmentLayoutTypes.Carousel;
 
             var att = new List<Attachment>(); 
 
-            var actions = new List<CardAction>()
-            {
-               AttachmentsHelper.CreateCardAction("First Action", "First Action"),AttachmentsHelper.CreateCardAction("Second Action","Second Action")
-            };
+          
         
             foreach (IListBlobItem item in container.ListBlobs(null, false))
             {
@@ -49,7 +48,11 @@ namespace AzureAwesomeBot.Dialogs
                     image = blob.Uri.ToString();
                     name = blob.Name;
                 }
-                var card = AttachmentsHelper.CreateHeroCardAttachment(name, "Text", "Subtitle", image, actions);
+                var actions = new List<CardAction>()
+            {
+               AttachmentsHelper.CreateCardAction("Delete Image", this.name)
+            };
+                var card = AttachmentsHelper.CreateHeroCardAttachment(name,null,null, image, actions);
                 att.Add(card);
             }
 
@@ -62,14 +65,16 @@ namespace AzureAwesomeBot.Dialogs
         {
             var message = await argument;
 
-            if (message.Text == "First Action")
+            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
+            CloudBlobContainer container = blobClient.GetContainerReference("botsource");
+            
+            if (message.Text == this.name)
             {
-                await context.PostAsync($"You selected: {message.Text}");
+                CloudBlockBlob blockBlob = container.GetBlockBlobReference(this.name);
+                blockBlob.Delete();
+                await context.PostAsync($"You deleted the file: {this.name}");
             }
-            else if (message.Text == "Second Action")
-            {
-                await context.PostAsync($"You selected: {message.Text}");
-            }
+            
             else
                 context.Wait(ActionSelected);
         }
