@@ -91,7 +91,7 @@ Pay attention to the **JSON message** that appears in the Emulator as well as th
 
 This response was configured to be sent via the MessageController class in Visual Studio when the user sends a text message to the Bot.
 
-### Task 2
+u### Task 2
 Let's go back to **Visual Studio** and **Stop the Debugging**:
 
 ![bot11.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot11.png) 
@@ -101,7 +101,7 @@ Let's go back to **Visual Studio** and **Stop the Debugging**:
 
 ## Exercise 4: Publish your Bot to Azure
 
-We are now going to publish our application to the cloud and stop running it locally.
+BWe are now going to publish our application to the cloud and stop running it locally.
 
 ### Task 1
 - Go to [Azure Management Portal](https://portal.azure.com) and **Sign In** with your Azure Account. 
@@ -150,7 +150,7 @@ Let's go back to **Visual Studio** and **publish** our Bot to the Web App we jus
 
 ![bot21.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot21.png)
 
-And that was it. We now have a Bot published on Azure and ready to be connected with a channel. 
+And that was it. We now have a Bot published on Azure and ready to be connected with a channel. But let's leave this part for later and go back to Visual Studio to add some functionality to our Bot.
 
 ## Next Steps
 
