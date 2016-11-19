@@ -108,6 +108,7 @@ BWe are now going to publish our application to the cloud and stop running it lo
 
 *![bot15.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot15.png) 
 
+
 - For the **App Name** use a **unique** name for your web app
 - **Create a new Resource Group** for your app (or use an existing one, it is totaly up to you)
 
@@ -153,5 +154,6 @@ And that was it. We now have a Bot published on Azure and ready to be connected 
 ## Next Steps
 
 - [Edit Your Bot Code](https://github.com/sophiehn/MySuperBots/tree/master/1.%20Create%20your%20First%20Bot/2.%20AzureAwesomeBot)
+- [Add Functionality To Your Bot](https://github.com/sophiehn/MySuperBots/tree/master/2.%20Add%20Functionality%20To%20Your%20Bot)
 - [Publish Your Bot](https://github.com/sophiehn/MySuperBots/tree/master/3.%20Publish%20Your%20Bot)
 
