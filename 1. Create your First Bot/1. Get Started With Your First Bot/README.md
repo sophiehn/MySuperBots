@@ -98,7 +98,7 @@ Let's go back to **Visual Studio** and **Stop the Debugging**:
 
 ![bot12.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot12.png) 
 
-
+*
 ## Exercise 4: Publish your Bot to Azure
 
 BWe are now going to publish our application to the cloud and stop running it locally.
@@ -108,7 +108,7 @@ BWe are now going to publish our application to the cloud and stop running it lo
 - **Create** a new **App Service** by selecting **+NEW=>Web+Mobile=>Web App** and filling the form with the nesseccary fields:
 
 
-![bot15.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot15.png) 
+*![bot15.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot15.png) 
 
 - For the **App Name** use a **unique** name for your web app
 - **Create a new Resource Group** for your app (or use an existing one, it is totaly up to you)
@@ -150,7 +150,7 @@ Let's go back to **Visual Studio** and **publish** our Bot to the Web App we jus
 
 ![bot21.png](http://i292.photobucket.com/albums/mm38/iCe-quEen99/bot21.png)
 
-And that was it. We now have a Bot published on Azure and ready to be connected with a channel. But let's leave this part for later and go back to Visual Studio to add some functionality to our Bot.
+And that was it. We now have a Bot published on Azure and ready to be connected with a channel. But let's leave this part for later and **go back to Visual Studio to add some functionality to our Bot**.
 
 ## Next Steps
 
