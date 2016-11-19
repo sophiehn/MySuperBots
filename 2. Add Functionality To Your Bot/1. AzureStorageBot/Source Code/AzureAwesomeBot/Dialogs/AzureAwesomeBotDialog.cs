@@ -29,7 +29,7 @@ namespace AzureAwesomeBot.Dialogs
             CloudBlobContainer container = blobClient.GetContainerReference("botsource");
 
             string image = null;
-
+            string name = null; 
             await context.PostAsync("What can I do for you today?");
             var message = context.MakeMessage();
             message.AttachmentLayout = AttachmentLayoutTypes.Carousel;
@@ -47,8 +47,9 @@ namespace AzureAwesomeBot.Dialogs
                 {
                     CloudBlockBlob blob = (CloudBlockBlob)item;
                     image = blob.Uri.ToString();
+                    name = blob.Name;
                 }
-                var card = AttachmentsHelper.CreateHeroCardAttachment("Title", "Text", "Subtitle", image, actions);
+                var card = AttachmentsHelper.CreateHeroCardAttachment(name, "Text", "Subtitle", image, actions);
                 att.Add(card);
             }
 
