@@ -14,7 +14,8 @@ namespace AzureAwesomeBot.Dialogs
         public async Task StartAsync(IDialogContext context)
         {
             await context.PostAsync("Hello from Azure Awesome Bot!");
-            context.Wait(InputGiven);
+            context.Wait(InputGiven); 
+
         }
 
         public async Task InputGiven(IDialogContext context, IAwaitable<IMessageActivity> argument)
