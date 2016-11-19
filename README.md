@@ -1,5 +1,5 @@
 
-# MyBots-Get Started
+# MySuperBots-Get Started
 
 In this Lab you will find 4 Modules:
 
