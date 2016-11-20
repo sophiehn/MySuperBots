@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 using Microsoft.Bot.Connector;
 using Microsoft.Bot.Builder.Dialogs;
 using AzureAwesomeBot.Helpers;
-using Microsoft.Azure; // Namespace for CloudConfigurationManager
-using Microsoft.WindowsAzure.Storage; // Namespace for CloudStorageAccount
-using Microsoft.WindowsAzure.Storage.Blob; // Namespace for Blob storage types
+using Microsoft.Azure; 
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Blob;
+using System.Net.Http;
 
 namespace AzureAwesomeBot.Dialogs
 {
@@ -31,15 +32,12 @@ namespace AzureAwesomeBot.Dialogs
             CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
             CloudBlobContainer container = blobClient.GetContainerReference("botsource");
 
-
             await context.PostAsync("What can I do for you today?");
             var message = context.MakeMessage();
             message.AttachmentLayout = AttachmentLayoutTypes.Carousel;
 
             var att = new List<Attachment>();
-
-
-
+            
             foreach (IListBlobItem item in container.ListBlobs(null, false))
             {
                 if (item.GetType() == typeof(CloudBlockBlob))
@@ -80,11 +78,6 @@ namespace AzureAwesomeBot.Dialogs
             {
                 await context.PostAsync($"Please upload your file");
                 context.Wait(UploadSelected);
-                message = await argument;
-                foreach (var attachment in message.Attachments)
-                {
-                    var content = attachment.Content; // I think the content of uploaded file here.
-                }
             }
         }
 
@@ -98,10 +91,29 @@ namespace AzureAwesomeBot.Dialogs
             var message = await argument;
             foreach (var attachment in message.Attachments)
             {
-                CloudBlockBlob blockBlob = container.GetBlockBlobReference("myimage");
-             //   blockBlob.UploadFromFile(attachment.ContentUrl);
+                string decodedURL = HttpUtility.UrlDecode(attachment.ContentUrl);
+                string imageName = decodedURL.Substring(decodedURL.LastIndexOf("\\") + 1);
+                CloudBlockBlob blockBlob = container.GetBlockBlobReference(imageName);
+                blockBlob.Properties.ContentType = attachment.ContentType;
+                try
+                {
+                    HttpClient client = new HttpClient();
+                    using (client)
+                    {
+
+                        using (var stream=await client.GetStreamAsync(decodedURL))
+                        {
+                           await blockBlob.UploadFromStreamAsync(stream);
+                        } 
+                    }
+                    await context.PostAsync("Successful");
+                }
+                catch (Exception)
+                {
+                    
+                }
+
             }
-            
         }
     }
 }
