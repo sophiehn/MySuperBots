@@ -16,7 +16,6 @@ namespace AzureAwesomeBot.Dialogs
     public class AzureAwesomeBotDialog : IDialog<object>
     {
 
-        CloudStorageAccount storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));
         string image = null;
         string name = null;
 
@@ -28,18 +27,19 @@ namespace AzureAwesomeBot.Dialogs
 
         public async Task InputGiven(IDialogContext context, IAwaitable<IMessageActivity> argument)
         {
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));
             CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
             CloudBlobContainer container = blobClient.GetContainerReference("botsource");
 
-           
+
             await context.PostAsync("What can I do for you today?");
             var message = context.MakeMessage();
             message.AttachmentLayout = AttachmentLayoutTypes.Carousel;
 
-            var att = new List<Attachment>(); 
+            var att = new List<Attachment>();
 
-          
-        
+
+
             foreach (IListBlobItem item in container.ListBlobs(null, false))
             {
                 if (item.GetType() == typeof(CloudBlockBlob))
@@ -50,9 +50,9 @@ namespace AzureAwesomeBot.Dialogs
                 }
                 var actions = new List<CardAction>()
             {
-               AttachmentsHelper.CreateCardAction("Delete Image", this.name)
+               AttachmentsHelper.CreateCardAction("Delete Image", this.name), AttachmentsHelper.CreateCardAction("Upload New Image", "Upload")
             };
-                var card = AttachmentsHelper.CreateHeroCardAttachment(name,null,null, image, actions);
+                var card = AttachmentsHelper.CreateHeroCardAttachment(name, null, null, image, actions);
                 att.Add(card);
             }
 
@@ -65,19 +65,43 @@ namespace AzureAwesomeBot.Dialogs
         {
             var message = await argument;
 
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));
             CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
             CloudBlobContainer container = blobClient.GetContainerReference("botsource");
-            
+
             if (message.Text == this.name)
             {
                 CloudBlockBlob blockBlob = container.GetBlockBlobReference(this.name);
                 blockBlob.Delete();
                 await context.PostAsync($"You deleted the file: {this.name}");
             }
-            
+
             else
-                context.Wait(ActionSelected);
+            {
+                await context.PostAsync($"Please upload your file");
+                context.Wait(UploadSelected);
+                message = await argument;
+                foreach (var attachment in message.Attachments)
+                {
+                    var content = attachment.Content; // I think the content of uploaded file here.
+                }
+            }
         }
 
+
+        private async Task UploadSelected(IDialogContext context, IAwaitable<IMessageActivity> argument)
+        {
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));
+            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
+            CloudBlobContainer container = blobClient.GetContainerReference("botsource");
+
+            var message = await argument;
+            foreach (var attachment in message.Attachments)
+            {
+                CloudBlockBlob blockBlob = container.GetBlockBlobReference("myimage");
+             //   blockBlob.UploadFromFile(attachment.ContentUrl);
+            }
+            
+        }
     }
 }
