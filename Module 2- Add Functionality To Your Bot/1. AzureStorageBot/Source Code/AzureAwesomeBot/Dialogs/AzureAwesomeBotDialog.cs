@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Bot.Connector;
 using Microsoft.Bot.Builder.Dialogs;
 using AzureAwesomeBot.Helpers;
-using Microsoft.Azure; 
+using Microsoft.Azure;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
 using System.Net.Http;
@@ -16,9 +16,9 @@ namespace AzureAwesomeBot.Dialogs
     [Serializable()]
     public class AzureAwesomeBotDialog : IDialog<object>
     {
-
         string image = null;
         string name = null;
+        List<string> nameList = new List<string>();
 
         public async Task StartAsync(IDialogContext context)
         {
@@ -37,7 +37,7 @@ namespace AzureAwesomeBot.Dialogs
             message.AttachmentLayout = AttachmentLayoutTypes.Carousel;
 
             var att = new List<Attachment>();
-            
+
             foreach (IListBlobItem item in container.ListBlobs(null, false))
             {
                 if (item.GetType() == typeof(CloudBlockBlob))
@@ -45,15 +45,15 @@ namespace AzureAwesomeBot.Dialogs
                     CloudBlockBlob blob = (CloudBlockBlob)item;
                     image = blob.Uri.ToString();
                     name = blob.Name;
+                    nameList.Add(name);
                 }
                 var actions = new List<CardAction>()
             {
-               AttachmentsHelper.CreateCardAction("Delete Image", this.name), AttachmentsHelper.CreateCardAction("Upload New Image", "Upload")
+               AttachmentsHelper.CreateCardAction("Delete Image", name), AttachmentsHelper.CreateCardAction("Upload New Image", "Upload")
             };
                 var card = AttachmentsHelper.CreateHeroCardAttachment(name, null, null, image, actions);
                 att.Add(card);
             }
-
             message.Attachments = att;
             await context.PostAsync(message);
             context.Wait(ActionSelected);
@@ -67,13 +67,12 @@ namespace AzureAwesomeBot.Dialogs
             CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
             CloudBlobContainer container = blobClient.GetContainerReference("botsource");
 
-            if (message.Text == this.name)
+            if (nameList.Contains(message.Text))
             {
-                CloudBlockBlob blockBlob = container.GetBlockBlobReference(this.name);
+                CloudBlockBlob blockBlob = container.GetBlockBlobReference(message.Text);
                 blockBlob.Delete();
-                await context.PostAsync($"You deleted the file: {this.name}");
+                await context.PostAsync($"You deleted the file: {message.Text}");
             }
-
             else
             {
                 await context.PostAsync($"Please upload your file");
@@ -101,16 +100,16 @@ namespace AzureAwesomeBot.Dialogs
                     using (client)
                     {
 
-                        using (var stream=await client.GetStreamAsync(decodedURL))
+                        using (var stream = await client.GetStreamAsync(decodedURL))
                         {
-                           await blockBlob.UploadFromStreamAsync(stream);
-                        } 
+                            await blockBlob.UploadFromStreamAsync(stream);
+                        }
                     }
                     await context.PostAsync("Successful");
                 }
                 catch (Exception)
                 {
-                    
+
                 }
 
             }
