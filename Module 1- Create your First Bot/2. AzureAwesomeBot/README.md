@@ -13,7 +13,7 @@ In this module, you'll:
 
 ## Prerequisites
 The following is required to complete this module:
-- Complete [Module 1- Get Started With Your First Bot](https://github.com/sophiehn/MySuperBots/tree/master/1.%20Create%20your%20First%20Bot/1.%20Get%20Started%20With%20Your%20First%20Bot)
+- Complete [Module 1- Get Started With Your First Bot](https://github.com/sophiehn/MySuperBots/tree/master/Module%201-%20Create%20your%20First%20Bot)
 
 
 ## Exercises
