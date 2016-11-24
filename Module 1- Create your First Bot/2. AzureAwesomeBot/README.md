@@ -19,9 +19,9 @@ The following is required to complete this module:
 ## Exercises
 This module includes the following exercises:
 
-1. [Add functionality to the Bot](https://github.com/sophiehn/MySuperBots/tree/master/1.%20Create%20your%20First%20Bot/2.%20AzureAwesomeBot#exercise-1-add-attachments-to-the-bot)
-1. [Test and understand the new functionalities](https://github.com/sophiehn/MySuperBots/tree/master/1.%20Create%20your%20First%20Bot/2.%20AzureAwesomeBot#exercise-2-test-and-understand-the-new-functionalities)
-1. [Publish the new Bot to Azure](https://github.com/sophiehn/MySuperBots/tree/master/1.%20Create%20your%20First%20Bot/2.%20AzureAwesomeBot#exercise-3-publish-the-new-bot-to-azure)
+1. [Add Attachments to the Bot](https://github.com/sophiehn/MySuperBots/tree/master/Module%201-%20Create%20your%20First%20Bot/2.%20AzureAwesomeBot#exercise-1-add-attachments-to-the-bot)
+1. [Test and understand the new functionalities](https://github.com/sophiehn/MySuperBots/tree/master/Module%201-%20Create%20your%20First%20Bot/2.%20AzureAwesomeBot#exercise-2-test-and-understand-the-new-functionalities)
+1. [Publish the new Bot to Azure](https://github.com/sophiehn/MySuperBots/tree/master/Module%201-%20Create%20your%20First%20Bot/2.%20AzureAwesomeBot#exercise-3-publish-the-new-bot-to-azure)
 
 
 ## Exercise 1: Add Attachments to the Bot
@@ -231,11 +231,11 @@ To fully understang what **each property** does, go back to the code and **chang
 
 ## Exercise 3: Publish the new Bot to Azure
 
-When you are ready, **Publish your updated application to Azure** by following the [instructions](https://github.com/sophiehn/MySuperBots/edit/master/1.%20Create%20your%20First%20Bot/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-4-publish-your-bot-to-azure) from Module 1
+When you are ready, **Publish your updated application to Azure** by following the [instructions](https://github.com/sophiehn/MySuperBots/tree/master/Module%201-%20Create%20your%20First%20Bot/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-4-publish-your-bot-to-azure) from Module 1
 
 
 ## Next Steps
 
-- [Add Functionality To Your Bot](https://github.com/sophiehn/MySuperBots/tree/master/2.%20Add%20Functionality%20To%20Your%20Bot)
-- [Publish Your Bot](https://github.com/sophiehn/MySuperBots/tree/master/3.%20Publish%20Your%20Bot)
+- [Add Functionality To Your Bot](https://github.com/sophiehn/MySuperBots/tree/master/Module%202-%20Add%20Functionality%20To%20Your%20Bot)
+- [Publish Your Bot](https://github.com/sophiehn/MySuperBots/tree/master/Module%203-%20Publish%20Your%20Bot)
 
