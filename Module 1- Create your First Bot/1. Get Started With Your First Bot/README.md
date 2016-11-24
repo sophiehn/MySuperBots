@@ -153,6 +153,7 @@ And that was it. We now have a Bot published on Azure and ready to be connected 
 
 ## Next Steps
 
-- [Edit Your Bot Code](https://github.com/sophiehn/MySuperBots/tree/master/1.%20Create%20your%20First%20Bot/2.%20AzureAwesomeBot)
-- [Add Functionality To Your Bot](https://github.com/sophiehn/MySuperBots/tree/master/2.%20Add%20Functionality%20To%20Your%20Bot)
-- [Publish Your Bot](https://github.com/sophiehn/MySuperBots/tree/master/3.%20Publish%20Your%20Bot)
+
+- [Edit The Template Code](https://github.com/sophiehn/MySuperBots/tree/master/Module%201-%20Create%20your%20First%20Bot/2.%20AzureAwesomeBot)
+- [Add Functionality To Your Bot](https://github.com/sophiehn/MySuperBots/tree/master/Module%202-%20Add%20Functionality%20To%20Your%20Bot)
+- [Publish Your Bot](https://github.com/sophiehn/MySuperBots/tree/master/Module%203-%20Publish%20Your%20Bot)
