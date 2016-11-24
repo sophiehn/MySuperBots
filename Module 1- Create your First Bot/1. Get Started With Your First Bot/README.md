@@ -17,17 +17,17 @@ In this module, you'll:
 The following is required to complete this module:
 
 - [Visual Studio Community 2015](https://www.visualstudio.com/products/visual-studio-community-vs) or greater - **Important:** Please update all VS extensions to their latest versions Tools->Extensions and Updates->Updates
-- [Microsoft Bot Framework Channel Emulator](https://download.botframework.com/bf-v3/tools/emulator/publish.htm)
+- [Microsoft Bot Framework Channel Emulator](https://aka.ms/bf-bc-emulator)
 - [Bot Application template](http://aka.ms/bf-bc-vstemplate) - **Download and Save the zip file** to your Visual Studio 2015 templates directory which is traditionally in **"%USERPROFILE%\Documents\Visual Studio 2015\Templates\ProjectTemplates\Visual C#\"**
 - An active Azure subscription
 
 ## Exercises
 This module includes the following exercises:
 
-1. [Create your first Bot Application in Visual Studio](https://github.com/sophiehn/MySuperBots/edit/master/1.%20Create%20your%20First%20Bot/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-1-create-your-first-bot-application-in-visual-studio)
-1. [Debug your Application](https://github.com/sophiehn/MySuperBots/edit/master/1.%20Create%20your%20First%20Bot/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-2-debug-your-application)
-1. [Chat with your Bot](https://github.com/sophiehn/MySuperBots/edit/master/1.%20Create%20your%20First%20Bot/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-3-chat-with-your-bot)
-1. [Publish your Bot to Azure](https://github.com/sophiehn/MySuperBots/edit/master/1.%20Create%20your%20First%20Bot/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-4-publish-your-bot-to-azure)
+1. [Create your first Bot Application in Visual Studio](https://github.com/sophiehn/MySuperBots/tree/master/Module%201-%20Create%20your%20First%20Bot/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-1-create-your-first-bot-application-in-visual-studio)
+1. [Debug your Application](https://github.com/sophiehn/MySuperBots/tree/master/Module%201-%20Create%20your%20First%20Bot/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-2-debug-your-application)
+1. [Chat with your Bot](https://github.com/sophiehn/MySuperBots/tree/master/Module%201-%20Create%20your%20First%20Bot/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-3-chat-with-your-bot)
+1. [Publish your Bot to Azure](https://github.com/sophiehn/MySuperBots/tree/master/Module%201-%20Create%20your%20First%20Bot/1.%20Get%20Started%20With%20Your%20First%20Bot#exercise-4-publish-your-bot-to-azure)
 
 ## Exercise 1: Create your first Bot Application in Visual Studio
 
@@ -156,4 +156,3 @@ And that was it. We now have a Bot published on Azure and ready to be connected 
 - [Edit Your Bot Code](https://github.com/sophiehn/MySuperBots/tree/master/1.%20Create%20your%20First%20Bot/2.%20AzureAwesomeBot)
 - [Add Functionality To Your Bot](https://github.com/sophiehn/MySuperBots/tree/master/2.%20Add%20Functionality%20To%20Your%20Bot)
 - [Publish Your Bot](https://github.com/sophiehn/MySuperBots/tree/master/3.%20Publish%20Your%20Bot)
-
