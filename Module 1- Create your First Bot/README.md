@@ -58,10 +58,9 @@ Now let's see what is inside this dialog. **Open** the **Dialogs Folder** and do
 
 The **StartAsync** Task calls the **MessageReceivedAsync** Task everytime the RootDialog is being called by the MessageController (in this case, every time the user posts something to the conversation). 
 
-![bot35.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/RootDialog2.PNG)
+![bot35.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/RootDialog2.png)
 
-![bot36.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/RootDialog3.PNG)
-
+![bot36.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/RootDialog3.png)
 
 The **MessageReceivedAsync** Task within Dialogs\RootDialog.cs sends a reply that echos back the user's message, prefixed with the text 'You sent' and ending in the text 'which was ## characters', where ## represents the number of characters in the user's message.
 
@@ -85,7 +84,7 @@ When using the emulator to test your Bot application, **make note of the port th
 ![bot6.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/PortNumber.png)
 
 ### Task 3
-Now **open the Bot Framework Emulator**. 
+Now open the **Bot Framework Emulator**: 
 
 ![bot7.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/Emulator.PNG) 
 
@@ -96,8 +95,8 @@ When working with the emulator with a bot running locally, you need:
 - This will only work with the emulator running locally; in the cloud you would instead have to specify the appropriate URL and authentication values 
 
 ![bot8.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/Emulator2.png)
-![bot81.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/Emulator3.png)
-![bot81.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/EmulatorLog.png)
+![bot81.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/Emulator3.PNG)
+![bot82.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/EmulatorLog.PNG)
 
 ## Exercise 3: Chat with your Bot
 Let's try to **chat with our Bot** to see what happens. 
@@ -105,21 +104,20 @@ Let's try to **chat with our Bot** to see what happens.
 ### Task 1
 **Type anything** in the Emulator Window and **press Enter** to see the response: 
 
-![bot9.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/EmulatorMessage.png)
+![bot9.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/EmulatorMessage.PNG)
 
 ![bot10.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/EmulatorReply.PNG) 
 
-![bot101.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/EmulatorReplyLog.PNG) 
+![bot101.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/EmulatorReplyLog.png) 
 
 Pay attention to the **JSON message** that appears in the Emulator as well as the **POST(200)**. That means that our message was suggesfully delivered to the Bot and it replied with a JSON message with the text property set to **"You sent hi which was 2 characters"**. 
 
 This response was configured to be sent via the MessageController class in Visual Studio when the user sends a text message to the Bot.
 
 ### Task 2
-Let's go back to **Visual Studio** and click the **Stop the Debugging** sign.
+Let's go back to **Visual Studio** and click the **Stop** button.
 
 ## Exercise 4: Publish your Bot to Azure
-
 We are now going to publish our application to the cloud instead of running it locally. In order to do that, we will need an  **App Service running on Azure**, which we can create and deploy with many ways. Let's try the most simple one for this case, via Visual Studio.
 
 ### Task 1
@@ -146,11 +144,12 @@ If you don't have a Resource Group already, go ahead and create one. Then select
 ![bot21.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/PublishToAzure5.png) 
 
 In this case I selected **North Europe** as a Region and **Free** as tier, so we don't get any excessive charges in our subscription. 
-We are ready to Publish our Bot to the Azure App Service we just created. 
+
+- We are ready to Publish our Bot to the Azure App Service we just created. 
 
 ![bot211.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/PublishToAzure6.png) 
 
-Once we hit that **Create** button, the deployment will start automatically, so we just sit back and wait:
+- Once we hit that **Create** button, the deployment will start automatically, so we just sit back and wait:
 
 ![bot212.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/Deploying.png) 
 
