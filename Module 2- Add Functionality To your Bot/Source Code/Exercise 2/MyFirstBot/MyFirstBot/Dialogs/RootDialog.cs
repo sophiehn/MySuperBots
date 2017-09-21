@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
+using System.Threading;
 
 namespace MyFirstBot.Dialogs
 {
@@ -17,39 +18,44 @@ namespace MyFirstBot.Dialogs
             return Task.CompletedTask;
         }
 
-        private async Task MessageReceivedAsync(IDialogContext context, IAwaitable<object> result)
+        private async Task MessageReceivedAsync(IDialogContext context, IAwaitable<IMessageActivity> result)
         {
-            var message = await result as Activity;
-
-            if (message.Text == "reset")
+            var message = await result;
+            if (message.Text.ToLower().Contains("reset"))
             {
-                PromptDialog.Confirm(
-                    context,
-                    AfterResetAsync,
-                    "Are you sure you want to reset the count?",
-                    "Didn't get that!",
-                    promptStyle: PromptStyle.None);
+                await this.RequestConfirmationAsync(context);
             }
             else
             {
-                await context.PostAsync($"{this.count++}: You said {message.Text}");
+                await context.PostAsync($"{count++}: You said {message.Text}");
                 context.Wait(MessageReceivedAsync);
             }
+            
         }
 
-        public async Task AfterResetAsync(IDialogContext context, IAwaitable<bool> argument)
+        private async Task RequestConfirmationAsync(IDialogContext context)
         {
-            var confirm = await argument;
-            if (confirm)
+            await context.PostAsync("Are you sure you want to reset the count?");
+            context.Call(new ConfirmationDialog(), this.ResumeAfterConfirmation);           
+        }
+
+        private async Task ResumeAfterConfirmation(IDialogContext context, IAwaitable<string> result)
+        {
+            var resultFromConfirm = await result;
+
+            await context.PostAsync($"Your confirmation for reset is: {resultFromConfirm}");
+            if (resultFromConfirm.ToLower().Contains("yes"))
             {
-                this.count = 1;
+                count = 1;
                 await context.PostAsync("Reset count.");
             }
             else
             {
                 await context.PostAsync("Did not reset count.");
             }
+
             context.Wait(MessageReceivedAsync);
         }
+
     }
 }
