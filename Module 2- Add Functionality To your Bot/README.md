@@ -95,7 +95,7 @@ public class RootDialog : IDialog<object>
 - Go ahead and **type a few more messages**. Did you notice that the Bot is **counting the number of messages** you have sent so far? This means that it is able to transfer a **State** between the messages.
 - Now let's **type 'Reset'** and after that **'Yes'** when confirmation is needed. You should get back a 'Reset count' message. Now try to **send another message** to the Bot. It should start counting from the beggining:   
 
-[CountResetExample](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/CountResetExample.PNG)
+![CountResetExample](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/CountResetExample.PNG)
 
 Let's take a moment to dive in the code and understand what it does. The ```MessageReceived``` Task, instead of counting the length or the message and posting the results, now has an **if condition**. 
 
@@ -107,12 +107,12 @@ In case the user types in **'Reset'**, the task:
 
 In any other case, the Task echos the user message with the message count in the beginning:
 
-[MessageReceived](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/MessageReceived.PNG)
+![MessageReceived](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/MessageReceived.PNG)
 
 The ```AfterResetAsync``` Task takes as input the ```IDialogContext context``` and an ``` IAwaitable<bool> argument ``` which contains the **result of the reset confirmation dialog** above.
 According to its value, the Task resets (or doesn't reset) the count and posts the corresponding message to the user:
 
-[AfterReset](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/AfterReset.PNG)
+![AfterReset](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/AfterReset.PNG)
 
 The ```IDialogContext``` interface that is passed into each dialog method provides access to the services that a dialog requires to save state and communicate with the channel. The ```IDialogContext``` interface comprises three interfaces: ```Internals.IBotData```, ```Internals.IBotToUser```, and ```Internals.IDialogStack```.
 
