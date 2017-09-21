@@ -1,12 +1,12 @@
 
 ##  Overview
 
-In this Module you will set up your pc with all the prerequisites and create your first Bot Application, using the template provided by the Microsoft Bot Framework.
+In this Module you will set up your PC with all the prerequisites and create your first Bot Application, using the template provided by the Microsoft Bot Framework SDK for .NET.
 
 
 ##  Objectives
 
-In this module, you'll:
+After completing this module, you should be able to:
 - Create a **Bot Application**
 - **Debug** your Bot Application locally 
 - Use the Microsoft Bot Framework Channel Emulator to **chat with your Bot** and **understand how the communication works**
@@ -34,35 +34,44 @@ This module includes the following exercises:
 ### Task 1 
 Open Visual Studio 2017 and Create a **New Project** by selecting **Visual C#=>Bot Application** from the Templates. **Name** your Project **MyFirstBot**: 
 
-![bot1.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/CreateProject.PNG) 
+![CreateProject](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/CreateProject.PNG) 
 
 The template is a fully functional Echo Bot that takes the user's text utterance as input and returns it as output.
  
 ### Task 2 
 Let's take a look for a moment on what the template has created for us: Check the **Solution Explorer** to see the resources  created    
 
-![bot2.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/SolutionExplorer.PNG)
+![SolutionExplorer](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/SolutionExplorer.PNG)
 
 ### Task 3 
-**Open** the **Controllers Folder** and double-click on the **MessagesController.cs** file. There you can see the MessagesController Class with an async **Post Task**.    
+**Open** the **Controllers Folder** and double-click on the **MessagesController.cs** file. There you can see the MessagesController Class with an ```async Post``` Task.    
 
-![bot3.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/MessageController.PNG)  
+![MessageController](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/MessageController.PNG)  
 
-The **Post Task** within Controllers\MessagesController.cs receives the message from the user and invokes the Root dialog. The **BotAuthentication** decoration on the method is used to validate your Bot Connector credentials over HTTPS. 
+The ```Post``` Task within **Controllers\MessagesController.cs** receives the message from the user and invokes the Root dialog. The ```BotAuthentication``` decoration on the method is used to validate your Bot Connector credentials over HTTPS. 
 
-The **HandleSystemMessage** method is used to handle some cases other than sending a message to the bot, like what happends when the user adds or removes the bot from their contact list (useful for sending a greet or goodbye message to the user), members being added and removed to the conversation, if the user is typing a message, etc. We will focus on the Post method for now and come back to these later.
+The ```Conversation.SendAsync``` method is **key to implementing dialogs** with the Bot Builder SDK for .NET. It follows the dependency inversion principle and performs these steps:
+- **Instantiates** the required components
+- **Deserializes the conversation state** (the dialog stack and the state of each dialog in the stack) from IBotDataStore
+- **Resumes the conversation process** where the bot suspended and **waits for a message**
+- **Sends the replies**
+- **Serializes the updated conversation state** and **saves it back** to IBotDataStore
 
-Now let's see what is inside this dialog. **Open** the **Dialogs Folder** and double-click on the **RootDialog.cs** file. There you can see the RootDialog Class with a **StartAsync** and a **MessageReceivedAsync** Task. The root dialog processes the message and generates a response. 
+The ```HandleSystemMessage``` Activity is used to handle some cases other than sending a message to the bot, like what happends when the user adds or removes the bot from their contact list (useful for sending a greet or goodbye message to the user), members being added and removed to the conversation, if the user is typing a message, etc. We will focus on the Post method for now and come back to these later.
+
+Now let's see what is inside this dialog. **Open** the **Dialogs Folder** and double-click on the **RootDialog.cs** file. There you can see the RootDialog Class with a ```StartAsync``` and a ```MessageReceivedAsync``` Task. The root dialog processes the message and generates a response. 
 
 ![bot34.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/RootDialog.PNG)
 
-The **StartAsync** Task calls the **MessageReceivedAsync** Task everytime the RootDialog is being called by the MessageController (in this case, every time the user posts something to the conversation). 
+The ```StartAsync```* Task calls the ```MessageReceivedAsync``` Task everytime the ```RootDialog``` is being called by the MessageController (in this case, every time the user sends a message to the Bot). 
 
 ![bot35.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/RootDialog2.png)
 
 ![bot36.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/RootDialog3.png)
 
-The **MessageReceivedAsync** Task within Dialogs\RootDialog.cs sends a reply that echos back the user's message, prefixed with the text 'You sent' and ending in the text 'which was ## characters', where ## represents the number of characters in the user's message.
+The ```MessageReceivedAsync``` Task within **Dialogs\RootDialog.cs** sends a reply that echos back the user's message, prefixed with the text 'You sent' and ending in the text 'which was ## characters', where ## represents the number of characters in the user's message.
+
+I highly recommend to visit this [website](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-concepts) in order to understand the **Key Concepts of the Bot Builder SDK** for .NET, like the **Connector**, the **State**, the **Activity**, the **Dialog**, etc. 
 
 ## Exercise 2: Debug your Application
 In order to **run the application** and check out what it does, we will use the **Bot Framework Emulator** to test our Bot application. The Bot Framework provides a a channel emulator that lets you test calls to your Bot as if it were being called by the Bot Framework cloud service. You can find detailed documenation on how debuging with the Bot Framework Emulator works [here](https://docs.microsoft.com/en-us/bot-framework/debug-bots-emulator).
@@ -110,7 +119,7 @@ Let's try to **chat with our Bot** to see what happens.
 
 ![bot101.png](https://github.com/sophiehn/MySuperBots/blob/master/Module%201-%20Create%20your%20First%20Bot/Images/EmulatorReplyLog.png) 
 
-Pay attention to the **JSON message** that appears in the Emulator as well as the **POST(200)**. That means that our message was suggesfully delivered to the Bot and it replied with a JSON message with the text property set to **"You sent hi which was 2 characters"**. 
+Pay attention to the **JSON message** that appears in the Emulator as well as the **POST 200**. That means that our message was suggesfully delivered to the Bot and it replied with a JSON message with the text property set to **"You sent hi which was 2 characters"**. 
 
 This response was configured to be sent via the MessageController class in Visual Studio when the user sends a text message to the Bot.
 
@@ -163,7 +172,13 @@ In the **Output Window** we can monitor the progress of the publishing process. 
 
 And that was it. We now have a Bot with a public endpoint published on Azure and ready to be connected with a channel. But let's leave this part for later and **go back to Visual Studio to add some functionality to our Bot**.
 
+
+## Additional Resources
+
+- [Microsoft bot Framework](https://dev.botframework.com/)
+- [Bot Framework Documentation](https://docs.microsoft.com/en-us/bot-framework/) - Introduction, Get Started, How it works, Design Patterns
+- [Key concepts in the Bot Builder SDK for .NET](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-concepts)
+
 ## Next Step
 
-
-- [Add Basic Functionality to your Bot]()
+- [Add Basic Functionality to your Bot](https://github.com/sophiehn/MySuperBots/tree/master/Module%202-%20Add%20Functionality%20To%20Your%20Bot)
