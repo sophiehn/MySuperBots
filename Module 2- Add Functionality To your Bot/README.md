@@ -29,10 +29,10 @@ The following is required to complete this module:
 ## Exercises
 This module includes the following exercises:
 
-1. [Create a Message-Counting Bot with State](https://github.com/sophiehn/MySuperBots/tree/master/Module%201-%20Create%20your%20First%20Bot#exercise-1-create-your-first-bot-application-in-visual-studio)
-1. [Invoke a Dialog from another Dialog](https://github.com/sophiehn/MySuperBots/tree/master/Module%201-%20Create%20your%20First%20Bot#exercise-2-debug-your-application)
-1. [Create a Bot with a Chain of Dialogs](https://github.com/sophiehn/MySuperBots/tree/master/Module%201-%20Create%20your%20First%20Bot#exercise-3-chat-with-your-bot)
-1. [Explore the Dialog Lifecycle](https://github.com/sophiehn/MySuperBots/tree/master/Module%201-%20Create%20your%20First%20Bot#exercise-4-publish-your-bot-to-azure)
+1. [Create a Message-Counting Bot with State](https://github.com/sophiehn/MySuperBots/tree/master/Module%202-%20Add%20Functionality%20To%20your%20Bot#exercise-1-create-a-message-counting-bot-with-state)
+1. [Invoke a Dialog from another Dialog](https://github.com/sophiehn/MySuperBots/tree/master/Module%202-%20Add%20Functionality%20To%20your%20Bot#exercise-2-invoke-a-dialog-from-another-dialog)
+1. [Create a Bot with a Chain of Dialogs]()
+1. [Explore the Dialog Lifecycle]()
 
 ## Exercise 1: Create a Message-Counting Bot with State
 
@@ -95,7 +95,7 @@ public class RootDialog : IDialog<object>
 - Go ahead and **type a few more messages**. Did you notice that the Bot is **counting the number of messages** you have sent so far? This means that it is able to transfer a **State** between the messages.
 - Now let's **type 'Reset'** and after that **'Yes'** when confirmation is needed. You should get back a 'Reset count' message. Now try to **send another message** to the Bot. It should start counting from the beggining:   
 
-[CountResetExample]()
+[CountResetExample](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/CountResetExample.PNG)
 
 Let's take a moment to dive in the code and understand what it does. The ```MessageReceived``` Task, instead of counting the length or the message and posting the results, now has an **if condition**. 
 
@@ -107,12 +107,12 @@ In case the user types in **'Reset'**, the task:
 
 In any other case, the Task echos the user message with the message count in the beginning:
 
-[MessageReceived]()
+[MessageReceived](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/MessageReceived.PNG)
 
 The ```AfterResetAsync``` Task takes as input the ```IDialogContext context``` and an ``` IAwaitable<bool> argument ``` which contains the **result of the reset confirmation dialog** above.
 According to its value, the Task resets (or doesn't reset) the count and posts the corresponding message to the user:
 
-[AfterReset]()
+[AfterReset](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/AfterReset.PNG)
 
 The ```IDialogContext``` interface that is passed into each dialog method provides access to the services that a dialog requires to save state and communicate with the channel. The ```IDialogContext``` interface comprises three interfaces: ```Internals.IBotData```, ```Internals.IBotToUser```, and ```Internals.IDialogStack```.
 
