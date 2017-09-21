@@ -1,15 +1,19 @@
 
 ## Abstract
 
-When you create a bot using the Bot Builder SDK for .NET, you can use dialogs to model a conversation and manage conversation flow. 
+When you create a bot using the **Bot Builder SDK for .NET**, you can **use dialogs to model a conversation** and **manage conversation flow**. 
 Each dialog is an abstraction that encapsulates its own state in a C# class that implements ```IDialog```. 
 A dialog can be composed with other dialogs to maximize reuse, and a dialog context maintains the stack of dialogs that are active in the conversation at any point in time. 
 
-When you use dialogs in the Bot Builder SDK for .NET, conversation state (the dialog stack and the state of each dialog in the stack) is automatically stored using the Bot Framework State service. This enables your bot to be stateless, much like a web application that does not need to store session state in web server memory.
+**In a traditional application**, everything begins with the **main screen**. The main screen **invokes a new screen**. The new screen remains **in control until it either closes or invokes other screens**. If the new order screen closes, the user is returned to the main screen.
+
+**In a bot, everything begins with the root dialog**. The root dialog **invokes a new dialog**. At that point, **the new dialog takes control** of the conversation and remains in control until it either closes or invokes other dialogs. If the new dialog closes, **control of the conversation is returned back to the root dialog**.
+
+When you use dialogs in the Bot Builder SDK for .NET, conversation state (the dialog stack and the state of each dialog in the stack) is automatically stored using the Bot Framework State service. This **enables your bot to be stateless**, much like a web application that does not need to store session state in web server memory.
 
 ## Overview
 
-In this Module you will add some basic functionality to your Bot and learn how to handle activities, dialogs and states.
+In this Module you will add some basic functionality to your Bot and learn how to create and invoke dialogs and handle states.
 
 ##  Objectives
 
@@ -38,7 +42,7 @@ This module includes the following exercises:
 
 In the Bot Builder SDK for .NET, the Builder library enables you to implement dialogs. 
 
-### Task 1 
+### Task 1- Create the Reset Process 
 
 - Let's go back to our **Project** and **replace** the ```RootDialog``` class  with the following:
 
@@ -89,7 +93,7 @@ public class RootDialog : IDialog<object>
 }
 ```
 
-### Task 2
+### Task 2- Test the new Code
 
 - We **Start the project** again, and connect to the **Emulator**. If we **type a message** to the Bot, we will now get a different response. 
 - Go ahead and **type a few more messages**. Did you notice that the Bot is **counting the number of messages** you have sent so far? This means that it is able to transfer a **State** between the messages.
@@ -123,3 +127,14 @@ This was a simple example of how we can add user interactions within the Bot. No
 
 ## Exercise 2: Invoke a Dialog from another Dialog
 
+Now that we fully understood the process of the reset count with the ```PromptDialog```, let's see how we can create a more reusable solution.
+
+Let's assume that we have a use case where we need confirmation dialogs for various actions, not only for reset. With the above approach (PromptDialog), we would have to create a new dialog for every action we want to confirm. 
+
+What if we could make the confirmation dialog more generic, and use it everytime we want to confirm an action?
+
+### Task 1- Modify the Root Dialog
+
+### Task 2- Create a Generic Confirmation Dialog
+
+### Task 3- Invoke the Dialog in the Root
