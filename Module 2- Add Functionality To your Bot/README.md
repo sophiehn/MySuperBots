@@ -159,11 +159,7 @@ using Microsoft.Bot.Connector;
 
 ![Interface](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/Interface.png)
 
-You should be at the point that your code looks like this:
-
-![Start](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/ConfirmationDialogStart.png)
-
-If so, **replace the code inside the class** with the following:
+- **Replace the code inside the class** with the following:
 
 ```csharp
 public async Task StartAsync(IDialogContext context)
@@ -340,6 +336,10 @@ private async Task RequestResetAsync(IDialogContext context)
 ![subscribe](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/subscribe.png)
 
 Now, we could add many other cases that Confirmation is needed, but let's keep it simple for now and focus on perfecting the user experience. 
+
+## Exercise 3: Create a Bot with a Chain of Dialogs
+
+## Exercise 4: Explore the Dialog Lifecycle
 
 Noticed anything unusual up until now? For me, the 'Type yes or no' part is not very user friendly. I would prefer to have a list of options in a form of a button to select instead of typing.
 Aggree? Let's move forward to the next Module then and see how we can make this conversation flow more 'pretty'.
