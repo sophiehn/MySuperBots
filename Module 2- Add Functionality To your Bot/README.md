@@ -137,35 +137,35 @@ What if we could make the confirmation dialog more generic, and use it everytime
 
 - Let's add a new Dialog to our  **Project** by **right-clicking** on it=>**Add**=> **Class** which we are going to name **ConfirmationDialog.cs**:
 
-![ConfirmationDialog](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/ConfirmationDialog.PNG)
+![ConfirmationDialog](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/ConfirmationDialog.png)
 
-![ConfirmationDialog2](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/ConfirmationDialog2.PNG)
+![ConfirmationDialog2](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/ConfirmationDialog2.png)
 
 Now we have a class ready to be turned into a Bot Dialog:
 
 - **Replace the class code** with:
-``` 
+``` csharp
 [Serializable]
 public class ConfirmationDialog : IDialog<string> 
 {
 }
 ```
 - **Add the following** dependencies on the using area:
-```
+```csharp
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
 ```
 - **Hover** on the ```IDialog<string>``` , click on the LightBulb and select **Implement Interface**:
 
-![Interface](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/Interface.PNG)
+![Interface](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/Interface.png)
 
 You should be at the point that your code looks like this:
 
-![Start](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/ConfirmationDialogStart.PNG)
+![Start](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/ConfirmationDialogStart.png)
 
 If so, **replace the code inside the class** with the following:
 
-```
+```csharp
 public async Task StartAsync(IDialogContext context)
 {
   context.Wait(this.MessageReceivedAsync);
@@ -188,7 +188,7 @@ We are all set with the Confirmation Method, now let's put it into use in our Ro
 ### Task 2- Invoke the Dialog in the Root
 
 - **Replace the Root Dialog Class** with the following:
-```
+```csharp
 [Serializable]
     public class RootDialog : IDialog<object>
     {
@@ -244,7 +244,7 @@ We are all set with the Confirmation Method, now let's put it into use in our Ro
 ### Task 3- Use the Confirmation Dialog in More Than One Cases
 
 - **Replace the MessageReceivedAsync Task** code with:
-```
+```csharp
  private async Task MessageReceivedAsync(IDialogContext context, IAwaitable<IMessageActivity> result)
         {
             var message = await result;
@@ -266,13 +266,13 @@ We are all set with the Confirmation Method, now let's put it into use in our Ro
 ```
 
 - **Add this declaration before your of StartAsyc** Task:
-```         
+```csharp         
 string methodCalled;    
 ```
 We need this to store the name of the method that requested the Confirmation Dialog.
 
 - **Add this method** to your class:
-```
+```csharp
         private async Task RequestSubscribeAsync(IDialogContext context)
         {
             await context.PostAsync("Are you sure you want to subscribe? Type yes or no");
@@ -283,7 +283,7 @@ We need this to store the name of the method that requested the Confirmation Dia
 
 - **Replace the ResumeAfterConfirmation Task** code with:
 
-```
+```csharp
 private async Task ResumeAfterConfirmation(IDialogContext context, IAwaitable<string> result)
         {
             var resultFromConfirm = await result;
@@ -326,7 +326,7 @@ private async Task ResumeAfterConfirmation(IDialogContext context, IAwaitable<st
 ```
 
 - Finally, **replace the RequestResetAsync Task** with:
-```
+```csharp
 private async Task RequestResetAsync(IDialogContext context)
         {
             await context.PostAsync("Are you sure you want to reset the count? Type yes or no");
@@ -337,7 +337,7 @@ private async Task RequestResetAsync(IDialogContext context)
 
 - Test your Bot by typing **Subscribe** at any point of the conversation:
 
-![subscribe](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/subscribe.PNG)
+![subscribe](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/subscribe.png)
 
 Now, we could add many other cases that Confirmation is needed, but let's keep it simple for now and focus on perfecting the user experience. 
 
