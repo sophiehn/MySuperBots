@@ -133,8 +133,213 @@ Let's assume that we have a use case where we need confirmation dialogs for vari
 
 What if we could make the confirmation dialog more generic, and use it everytime we want to confirm an action?
 
-### Task 1- Modify the Root Dialog
+### Task 1- Create a Generic Confirmation Dialog 
 
-### Task 2- Create a Generic Confirmation Dialog
+- Let's add a new Dialog to our  **Project** by **right-clicking** on it=>**Add**=> **Class** which we are going to name **ConfirmationDialog.cs**:
 
-### Task 3- Invoke the Dialog in the Root
+![ConfirmationDialog](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/ConfirmationDialog.PNG)
+
+![ConfirmationDialog2](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/ConfirmationDialog2.PNG)
+
+Now we have a class ready to be turned into a Bot Dialog:
+
+- **Replace the class code** with:
+``` 
+[Serializable]
+public class ConfirmationDialog : IDialog<string> 
+{
+}
+```
+- **Add the following** dependencies on the using area:
+```
+using Microsoft.Bot.Builder.Dialogs;
+using Microsoft.Bot.Connector;
+```
+- **Hover** on the ```IDialog<string>``` , click on the LightBulb and select **Implement Interface**:
+
+![Interface](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/Interface.PNG)
+
+You should be at the point that your code looks like this:
+
+![Start](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/ConfirmationDialogStart.PNG)
+
+If so, **replace the code inside the class** with the following:
+
+```
+public async Task StartAsync(IDialogContext context)
+{
+  context.Wait(this.MessageReceivedAsync);
+}
+
+private async Task MessageReceivedAsync(IDialogContext context, IAwaitable<IMessageActivity> result)
+{
+ var message = await result;
+ if (message.Text.ToLower().Contains("yes"))
+    context.Done("Yes");
+ else
+    context.Done("No");
+}
+
+```
+What this does is, it simply checks if the user confirms an action or not and returns the result to the calling method.
+
+We are all set with the Confirmation Method, now let's put it into use in our Root Dialog.
+
+### Task 2- Invoke the Dialog in the Root
+
+- **Replace the Root Dialog Class** with the following:
+```
+[Serializable]
+    public class RootDialog : IDialog<object>
+    {
+        protected int count = 1;
+
+        public Task StartAsync(IDialogContext context)
+        {
+            context.Wait(MessageReceivedAsync);
+            return Task.CompletedTask;
+        }
+
+        private async Task MessageReceivedAsync(IDialogContext context, IAwaitable<IMessageActivity> result)
+        {
+            var message = await result;
+            if (message.Text.ToLower().Contains("reset"))
+            {
+                await this.RequestResetAsync(context);
+            }
+            else
+            {
+                await context.PostAsync($"{count++}: You said {message.Text}");
+                context.Wait(MessageReceivedAsync);
+            }
+
+        }
+
+        private async Task RequestResetAsync(IDialogContext context)
+        {
+            await context.PostAsync("Are you sure you want to reset the count? Type yes or no");         
+            context.Call(new ConfirmationDialog(), this.ResumeAfterConfirmation);
+        }
+
+        private async Task ResumeAfterConfirmation(IDialogContext context, IAwaitable<string> result)
+        {
+            var resultFromConfirm = await result;
+            if (resultFromConfirm.ToLower().Contains("yes"))
+            {
+                 count = 1;
+                 await context.PostAsync("Reset successfully.");
+            }
+            else
+                 await context.PostAsync("Did not reset.");
+            context.Wait(MessageReceivedAsync);
+        }
+    }
+```
+- Now Test again your Bot. It should have the same results as with the previous code.
+ 
+![Example](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/CountResetExample.PNG)
+
+ But now we can use the Confirmation Dialog for other cases as well, not just for the reset. For example, another scenario that usually needs to be confirmed is a request to subscribe to a service or thread. Let's add this scenario to our existing code, using the ConfirmationDialog to ask the user if they are sure or not to subscribe.
+
+### Task 3- Use the Confirmation Dialog in More Than One Cases
+
+- **Replace the MessageReceivedAsync Task** code with:
+```
+ private async Task MessageReceivedAsync(IDialogContext context, IAwaitable<IMessageActivity> result)
+        {
+            var message = await result;
+            if (message.Text.ToLower().Contains("reset"))
+            {
+                await this.RequestResetAsync(context);
+            }
+            else if (message.Text.ToLower().Contains("subscribe"))
+            {
+                await this.RequestSubscribeAsync(context);
+            }
+            else
+            {
+                await context.PostAsync($"{count++}: You said {message.Text}");
+                context.Wait(MessageReceivedAsync);
+            }
+
+        }
+```
+
+- **Add this declaration before your of StartAsyc** Task:
+```         
+string methodCalled;    
+```
+We need this to store the name of the method that requested the Confirmation Dialog.
+
+- **Add this method** to your class:
+```
+        private async Task RequestSubscribeAsync(IDialogContext context)
+        {
+            await context.PostAsync("Are you sure you want to subscribe? Type yes or no");
+            methodCalled = "RequestSubscribeAsync";
+            context.Call(new ConfirmationDialog(), this.ResumeAfterConfirmation);
+        }
+```
+
+- **Replace the ResumeAfterConfirmation Task** code with:
+
+```
+private async Task ResumeAfterConfirmation(IDialogContext context, IAwaitable<string> result)
+        {
+            var resultFromConfirm = await result;
+            if (resultFromConfirm.ToLower().Contains("yes"))
+            {
+                switch (methodCalled)
+                {
+
+                    case "RequestResetAsync":
+                        count = 1;
+                        await context.PostAsync("Reset successfully.");
+                        break;
+                    case "RequestSubscribeAsync":
+                        await context.PostAsync("Subscribed successfully.");
+                        break;
+                    default:
+                        await context.PostAsync("Oops, something went wrong. Gonna have to start over");
+                        break;
+                }
+
+            }
+            else
+            {
+                switch (methodCalled)
+                {
+
+                    case "RequestResetAsync":
+                        await context.PostAsync("Did not reset.");
+                        break;
+                    case "RequestSubscribeAsync":
+                        await context.PostAsync("Did not subscribe.");
+                        break;
+                    default:
+                        await context.PostAsync("Oops, something went wrong. Gonna have to start over");
+                        break;
+                }
+            }
+            context.Wait(MessageReceivedAsync);
+        }
+```
+
+- Finally, **replace the RequestResetAsync Task** with:
+```
+private async Task RequestResetAsync(IDialogContext context)
+        {
+            await context.PostAsync("Are you sure you want to reset the count? Type yes or no");
+            methodCalled = "RequestResetAsync";
+            context.Call(new ConfirmationDialog(), this.ResumeAfterConfirmation);
+        }
+```
+
+- Test your Bot by typing **Subscribe** at any point of the conversation:
+
+![subscribe](https://github.com/sophiehn/MySuperBots/blob/master/Module%202-%20Add%20Functionality%20To%20your%20Bot/Images/subscribe.PNG)
+
+Now, we could add many other cases that Confirmation is needed, but let's keep it simple for now and focus on perfecting the user experience. 
+
+Noticed anything unusual up until now? For me, the 'Type yes or no' part is not very user friendly. I would prefer to have a list of options in a form of a button to select instead of typing.
+Aggree? Let's move forward to the next Module then and see how we can make this conversation flow more 'pretty'.
